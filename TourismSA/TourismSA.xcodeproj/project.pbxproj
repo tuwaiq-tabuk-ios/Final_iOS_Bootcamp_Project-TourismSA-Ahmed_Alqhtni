@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2005CD30277A180E00A502BD /* signOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005CD2F277A180E00A502BD /* signOutVC.swift */; };
 		202347152769F5250078DF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202347142769F5250078DF7A /* AppDelegate.swift */; };
 		202347172769F5250078DF7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202347162769F5250078DF7A /* SceneDelegate.swift */; };
 		202347192769F5250078DF7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202347182769F5250078DF7A /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		202347292769F6D30078DF7A /* TourismTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202347282769F6D30078DF7A /* TourismTableViewCell.xib */; };
 		2023472B2769F6E70078DF7A /* TourismTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2023472A2769F6E70078DF7A /* TourismTableViewCell.swift */; };
 		2023472E2769F9300078DF7A /* ProfileTourismVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2023472D2769F9300078DF7A /* ProfileTourismVC.swift */; };
+		20631DED2779A9FD0014F901 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20631DEC2779A9FD0014F901 /* CollectionViewCell.swift */; };
+		20631DF12779F6650014F901 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20631DF02779F6650014F901 /* ForgetPasswordVC.swift */; };
 		207976C22770B9AC0081B14A /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207976C12770B9AC0081B14A /* signUpVC.swift */; };
 		207D72E3276A02A5001033B6 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D72E2276A02A5001033B6 /* Place.swift */; };
 		207D72E5276A0406001033B6 /* DetailTourismVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D72E4276A0406001033B6 /* DetailTourismVC.swift */; };
@@ -25,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2005CD2F277A180E00A502BD /* signOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signOutVC.swift; sourceTree = "<group>"; };
 		202347112769F5250078DF7A /* TourismSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TourismSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		202347142769F5250078DF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		202347162769F5250078DF7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +40,8 @@
 		202347282769F6D30078DF7A /* TourismTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TourismTableViewCell.xib; sourceTree = "<group>"; };
 		2023472A2769F6E70078DF7A /* TourismTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourismTableViewCell.swift; sourceTree = "<group>"; };
 		2023472D2769F9300078DF7A /* ProfileTourismVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTourismVC.swift; sourceTree = "<group>"; };
+		20631DEC2779A9FD0014F901 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		20631DF02779F6650014F901 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
 		207976C12770B9AC0081B14A /* signUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
 		207D72E2276A02A5001033B6 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		207D72E4276A0406001033B6 /* DetailTourismVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTourismVC.swift; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 		202347132769F5250078DF7A /* TourismSA */ = {
 			isa = PBXGroup;
 			children = (
+				20631DEC2779A9FD0014F901 /* CollectionViewCell.swift */,
 				207D72E6276A0437001033B6 /* Model */,
 				2023472C2769F8B10078DF7A /* Controller */,
 				202347312769F9650078DF7A /* View */,
@@ -94,6 +101,8 @@
 		2023472C2769F8B10078DF7A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2005CD2F277A180E00A502BD /* signOutVC.swift */,
+				20631DF02779F6650014F901 /* ForgetPasswordVC.swift */,
 				20DC287E277092EB005E9ED0 /* SignInVC.swift */,
 				207976C12770B9AC0081B14A /* signUpVC.swift */,
 				2023472A2769F6E70078DF7A /* TourismTableViewCell.swift */,
@@ -263,12 +272,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20631DED2779A9FD0014F901 /* CollectionViewCell.swift in Sources */,
+				20631DF12779F6650014F901 /* ForgetPasswordVC.swift in Sources */,
 				202347192769F5250078DF7A /* ViewController.swift in Sources */,
 				202347152769F5250078DF7A /* AppDelegate.swift in Sources */,
 				207976C22770B9AC0081B14A /* signUpVC.swift in Sources */,
 				20DC287F277092EB005E9ED0 /* SignInVC.swift in Sources */,
 				207D72E5276A0406001033B6 /* DetailTourismVC.swift in Sources */,
 				202347172769F5250078DF7A /* SceneDelegate.swift in Sources */,
+				2005CD30277A180E00A502BD /* signOutVC.swift in Sources */,
 				207D72E3276A02A5001033B6 /* Place.swift in Sources */,
 				2023472B2769F6E70078DF7A /* TourismTableViewCell.swift in Sources */,
 				2023472E2769F9300078DF7A /* ProfileTourismVC.swift in Sources */,

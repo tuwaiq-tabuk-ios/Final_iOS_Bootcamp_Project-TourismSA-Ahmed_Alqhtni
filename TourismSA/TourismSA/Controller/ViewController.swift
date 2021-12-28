@@ -6,15 +6,38 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ViewController: UIViewController {
   
   @IBOutlet weak var tourismTableView: UITableView!
-  @IBOutlet weak var profileButton: UIButton!
+  @IBOutlet weak var profileButton:
+  UIButton!
+  
+  
   var place = [PlaceData]()
+  
+  
+  @IBAction func signOut(_ sender: Any) {
+    
+    let auth = Auth.auth()
+            
+            do {
+                try auth.signOut()
+                self.dismiss(animated: true, completion:nil)
+                
+            } catch let signOutError {
+                let alert = UIAlertController(title: "Error", message: signOutError.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+                self.present(alert, animated: true, completion: nil)
+            }
+        
+        }
+    
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    hideKeyboardWhenTappedAround()
     
     self.place = array
     tourismTableView.register(UINib(nibName: "TourismTableViewCell", bundle: nil), forCellReuseIdentifier: "TourismCell")
@@ -55,7 +78,7 @@ extension ViewController : UITableViewDataSource{
       let img = URL(string: urlImg)
       cell.tourismImage.downloaded(from: img!)
       cell.tourismImage.contentMode = UIView.ContentMode.scaleAspectFill
-      cell.tourismImage.layer.cornerRadius = 25
+      cell.tourismImage.layer.cornerRadius = 21
       
       return cell
     }else{
@@ -103,4 +126,19 @@ extension UIImageView {
     guard let url = URL(string: link) else { return }
     downloaded(from: url, contentMode: mode)
   }
+}
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+  
+  
+  
+  
 }

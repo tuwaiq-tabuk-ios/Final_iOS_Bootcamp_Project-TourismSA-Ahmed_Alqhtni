@@ -29,6 +29,9 @@ class signUpVC: UIViewController {
       emailTextField.layer.cornerRadius = 20
       passwordTextField.layer.cornerRadius = 20
       
+      
+      
+      
  
     }
   
@@ -72,5 +75,4 @@ signInButton()
     
   }
   
-
 }

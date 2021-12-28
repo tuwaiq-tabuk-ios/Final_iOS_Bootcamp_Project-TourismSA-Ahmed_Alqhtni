@@ -14,23 +14,27 @@ class SignInVC: UIViewController {
   @IBOutlet weak var errorIb: UILabel!
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
- 
+  
+  @IBOutlet weak var forgetPassword: UIButton!
+  
   override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
     errorIb.alpha = 0
     emailTextField.layer.cornerRadius = 20
     passwordTextField.layer.cornerRadius = 20
-//    signInButton.layer.cornerRadius = 20
+    hideKeyboardWhenTappedAround()
+    
+    
     
   }
-      
-      
-      
-    
+  
+  
+  
   
   @IBAction func signInButton(_ sender: UIButton) {
     let email = emailTextField.text!.trimmingCharacters(in:.whitespacesAndNewlines)
     let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+    
     
     Auth.auth().signIn(withEmail: email, password: password) {
       
@@ -50,7 +54,7 @@ class SignInVC: UIViewController {
     }
     
   }
- 
-  }
+  
+}
 
 

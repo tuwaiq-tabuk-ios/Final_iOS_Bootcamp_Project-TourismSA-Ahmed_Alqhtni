@@ -14,7 +14,7 @@ class ProfileTourismVC: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Profile"
         
-        highlightLabel?.layer.cornerRadius = 10
+        highlightLabel?.layer.cornerRadius = 15
         highlightLabel?.layer.masksToBounds = true
       
     }
