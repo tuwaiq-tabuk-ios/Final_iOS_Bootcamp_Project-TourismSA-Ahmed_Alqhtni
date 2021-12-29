@@ -21,18 +21,18 @@ class ViewController: UIViewController {
   @IBAction func signOut(_ sender: Any) {
     
     let auth = Auth.auth()
-            
-            do {
-                try auth.signOut()
-                self.dismiss(animated: true, completion:nil)
-                
-            } catch let signOutError {
-                let alert = UIAlertController(title: "Error", message: signOutError.localizedDescription, preferredStyle: UIAlertController.Style.alert)
-                self.present(alert, animated: true, completion: nil)
-            }
-        
-        }
     
+    do {
+      try auth.signOut()
+      self.dismiss(animated: true, completion:nil)
+      
+    } catch let signOutError {
+      let alert = UIAlertController(title: "Error", message: signOutError.localizedDescription, preferredStyle: UIAlertController.Style.alert)
+      self.present(alert, animated: true, completion: nil)
+    }
+    
+  }
+  
   
   
   override func viewDidLoad() {
@@ -126,19 +126,9 @@ extension UIImageView {
     guard let url = URL(string: link) else { return }
     downloaded(from: url, contentMode: mode)
   }
+
 }
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-  
-  
-  
-  
-}
+
+
+
+

@@ -15,7 +15,7 @@ class ForgetPasswordVC:
   
   override func viewDidLoad() {
       super.viewDidLoad()
-
+    hideKeyboardWhenTappedAround()
   }
   
   @IBAction func forgetPassword(_ sender: Any) {

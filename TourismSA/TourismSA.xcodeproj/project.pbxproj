@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2005CD30277A180E00A502BD /* signOutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2005CD2F277A180E00A502BD /* signOutVC.swift */; };
 		202347152769F5250078DF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202347142769F5250078DF7A /* AppDelegate.swift */; };
 		202347172769F5250078DF7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202347162769F5250078DF7A /* SceneDelegate.swift */; };
 		202347192769F5250078DF7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202347182769F5250078DF7A /* ViewController.swift */; };
@@ -23,12 +22,12 @@
 		207D72E3276A02A5001033B6 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D72E2276A02A5001033B6 /* Place.swift */; };
 		207D72E5276A0406001033B6 /* DetailTourismVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D72E4276A0406001033B6 /* DetailTourismVC.swift */; };
 		20AC851C2771B04B00F790DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20AC851B2771B04B00F790DB /* GoogleService-Info.plist */; };
+		20D4350E277AEEB300BBD3FA /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4350D277AEEB300BBD3FA /* Extension.swift */; };
 		20DC287F277092EB005E9ED0 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DC287E277092EB005E9ED0 /* SignInVC.swift */; };
 		F32A7EFC298250C30F5F6B58 /* Pods_TourismSA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C838438EE4B3E8292430B0 /* Pods_TourismSA.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2005CD2F277A180E00A502BD /* signOutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signOutVC.swift; sourceTree = "<group>"; };
 		202347112769F5250078DF7A /* TourismSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TourismSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		202347142769F5250078DF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		202347162769F5250078DF7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		207D72E2276A02A5001033B6 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		207D72E4276A0406001033B6 /* DetailTourismVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTourismVC.swift; sourceTree = "<group>"; };
 		20AC851B2771B04B00F790DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		20D4350D277AEEB300BBD3FA /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		20DC287E277092EB005E9ED0 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		409FE812510D6A2EA9D53FAF /* Pods-TourismSA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourismSA.release.xcconfig"; path = "Target Support Files/Pods-TourismSA/Pods-TourismSA.release.xcconfig"; sourceTree = "<group>"; };
 		66D39A81CEDFF82C210E3C07 /* Pods-TourismSA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TourismSA.debug.xcconfig"; path = "Target Support Files/Pods-TourismSA/Pods-TourismSA.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,12 +101,12 @@
 		2023472C2769F8B10078DF7A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2005CD2F277A180E00A502BD /* signOutVC.swift */,
 				20631DF02779F6650014F901 /* ForgetPasswordVC.swift */,
 				20DC287E277092EB005E9ED0 /* SignInVC.swift */,
 				207976C12770B9AC0081B14A /* signUpVC.swift */,
 				2023472A2769F6E70078DF7A /* TourismTableViewCell.swift */,
 				202347182769F5250078DF7A /* ViewController.swift */,
+				20D4350D277AEEB300BBD3FA /* Extension.swift */,
 				2023472D2769F9300078DF7A /* ProfileTourismVC.swift */,
 				207D72E4276A0406001033B6 /* DetailTourismVC.swift */,
 			);
@@ -280,7 +280,7 @@
 				20DC287F277092EB005E9ED0 /* SignInVC.swift in Sources */,
 				207D72E5276A0406001033B6 /* DetailTourismVC.swift in Sources */,
 				202347172769F5250078DF7A /* SceneDelegate.swift in Sources */,
-				2005CD30277A180E00A502BD /* signOutVC.swift in Sources */,
+				20D4350E277AEEB300BBD3FA /* Extension.swift in Sources */,
 				207D72E3276A02A5001033B6 /* Place.swift in Sources */,
 				2023472B2769F6E70078DF7A /* TourismTableViewCell.swift in Sources */,
 				2023472E2769F9300078DF7A /* ProfileTourismVC.swift in Sources */,

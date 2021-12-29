@@ -20,8 +20,8 @@ class SignInVC: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     errorIb.alpha = 0
-    emailTextField.layer.cornerRadius = 20
-    passwordTextField.layer.cornerRadius = 20
+    emailTextField.layer.cornerRadius = 18
+    passwordTextField.layer.cornerRadius = 18
     hideKeyboardWhenTappedAround()
     
     

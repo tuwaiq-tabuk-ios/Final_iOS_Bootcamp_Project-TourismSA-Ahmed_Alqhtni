@@ -24,15 +24,13 @@ class signUpVC: UIViewController {
       
       errorIb.alpha = 0
       
-      firstNameTextField.layer.cornerRadius = 20
-      lastNameTextField.layer.cornerRadius = 20
-      emailTextField.layer.cornerRadius = 20
-      passwordTextField.layer.cornerRadius = 20
+      firstNameTextField.layer.cornerRadius = 18    
+      lastNameTextField.layer.cornerRadius = 18
+      emailTextField.layer.cornerRadius = 18
+      passwordTextField.layer.cornerRadius = 18
       
-      
-      
-      
- 
+      hideKeyboardWhenTappedAround()
+       
     }
   
   
