@@ -12,26 +12,23 @@ import FirebaseAuth
 class signUpVC: UIViewController {
   
   @IBOutlet weak var errorIb: UILabel!
-  
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var firstNameTextField: UITextField!
   @IBOutlet weak var lastNameTextField: UITextField!
   
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-      
-      errorIb.alpha = 0
-      
-      firstNameTextField.layer.cornerRadius = 18    
-      lastNameTextField.layer.cornerRadius = 18
-      emailTextField.layer.cornerRadius = 18
-      passwordTextField.layer.cornerRadius = 18
-      
-      hideKeyboardWhenTappedAround()
-       
-    }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    errorIb.alpha = 0
+    firstNameTextField.layer.cornerRadius = 18
+    lastNameTextField.layer.cornerRadius = 18
+    emailTextField.layer.cornerRadius = 18
+    passwordTextField.layer.cornerRadius = 18
+    hideKeyboardWhenTappedAround()
+    
+  }
   
   
   @IBAction func signInButton(_ sender: UIButton) {
@@ -40,12 +37,12 @@ class signUpVC: UIViewController {
       return
       
     }
-    
-signInButton()
-    
+    signInButton()
   }
   
+  
   func signInButton() {
+    
     let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
     let lastNametName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
     let emailTextField = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -56,13 +53,15 @@ signInButton()
       if error != nil {
         self.errorIb.alpha = 1
         self.errorIb.text = error?.localizedDescription
-      }else {
+      } else {
         
         let db = Firestore.firestore()
         db.collection("users").document((authResult?.user.uid)!).setData([
           "firstName":firstName,
-          "lastNametName":lastNametName
+          "lastNametName":lastNametName,
+          "type":"user"
         ])
+        
         let storyBord = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyBord.instantiateViewController(withIdentifier: "MainVC")
         vc.modalPresentationStyle = .overFullScreen
@@ -70,7 +69,6 @@ signInButton()
         
       }
     }
-    
   }
   
 }

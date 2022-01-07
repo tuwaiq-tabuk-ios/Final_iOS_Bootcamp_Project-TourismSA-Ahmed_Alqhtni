@@ -7,16 +7,10 @@
 
 import UIKit
 import MapKit
+import AVFAudio
+import AVFoundation
 
 class DetailTourismVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-  
-  var place: PlaceData?
-  
-  var arrImage = [String]()
-  var timer :Timer?
-  var cellindex = 0
-  
-  var arrFoto :PlaceData!
   
   
   @IBOutlet weak var detailImage: UIImageView!
@@ -26,16 +20,40 @@ class DetailTourismVC: UIViewController,UICollectionViewDelegate,UICollectionVie
   @IBOutlet weak var detailLikes: UILabel!
   @IBOutlet weak var iconMap: UIImageView!
   @IBOutlet weak var mapKit: MKMapView!
-  
   @IBOutlet weak var collectionView: UICollectionView!
   
   
   
+  var arrImage = [String]()
+  var timer :Timer?
+  var cellindex = 0
+  let synthesizer = AVSpeechSynthesizer()
+  var player: AVAudioPlayer?
+  var place: PlaceData? {
+    didSet {
+      self.navigationController?.title = place?.name
+    }
+  }
+  
+  
+  override func viewDidDisappear(_ animated: Bool) {
+    super.viewDidDisappear(animated)
+    if synthesizer.isSpeaking {
+      synthesizer.stopSpeaking(at: .immediate)
+    }
+  }
+  
+  
+  @IBAction func talk(_ sender: Any) {
+    
+    talks(place!.description)
+    
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    collectionView.layer.cornerRadius = 40
-    
+    collectionView.layer.cornerRadius = 48
     collectionView.delegate = self
     collectionView.dataSource = self
     
@@ -46,47 +64,80 @@ class DetailTourismVC: UIViewController,UICollectionViewDelegate,UICollectionVie
   
   
   override func viewWillAppear(_ animated: Bool) {
-    if let result = place{
+    if let result = place {
       detailName.text = result.name
       detailAddress.text = result.address
       detailDescription.text = result.description
+      print("\n\n\n******THE result.description::\(result.description)")
       detailLikes.text = "\(result.like) Likes"
+      for image in result.images {
+        arrImage.append(image)
+      }
       
-      arrImage = result.images
+      
       let lat = result.latitude
+      
       let long = result.longitude
       
       let anotation = MKPointAnnotation()
-      anotation.coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+      
+      anotation.coordinate = CLLocationCoordinate2D(latitude: lat
+                                                    ,
+                                                    longitude: long)
       anotation.title = detailName.text
       mapKit.addAnnotation(anotation)
-      
-      let region = MKCoordinateRegion(center: anotation.coordinate, latitudinalMeters: 100000, longitudinalMeters: 100000)
-      mapKit.setRegion(region, animated: true)
+      let region = MKCoordinateRegion(center: anotation.coordinate,
+                                      latitudinalMeters: 100000,
+                                      longitudinalMeters: 100000)
+      mapKit.setRegion(region,
+                       animated: true)
       
       
       
     }
   }
   
+  func talks(_ string:String) {
+    let utterance = AVSpeechUtterance(string:string)
+    utterance.voice = AVSpeechSynthesisVoice(language: "en-ZA")
+    
+    if synthesizer.isSpeaking {
+      synthesizer.stopSpeaking(at: .word)
+      //       synthesizer.speak(utterance)
+    } else {
+      synthesizer.speak(utterance)
+    }
+  }
   
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      numberOfItemsInSection section: Int) -> Int {
     
     return arrImage.count
-  }
-  
-  
-  
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Place", for:indexPath) as! CollectionViewCell
     
-    cell.imageCell.downloaded(from: arrImage[indexPath.row])
-    return cell
   }
   
   
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    return CGSize(width: collectionView.frame.width , height: collectionView.frame.height )
+  func collectionView(_ collectionView: UICollectionView,
+                      cellForItemAt indexPath: IndexPath) ->
+  UICollectionViewCell {
+    
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Place",
+                                                  for:indexPath) as! CollectionViewCell
+    
+    cell.imageCell.sd_setImage(with: URL(string: arrImage[indexPath.row]),
+                               placeholderImage: UIImage(named: "IMG_1287"))
+    return cell
+    
+  }
+  
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      sizeForItemAt indexPath: IndexPath)
+  -> CGSize {
+    return CGSize(width: collectionView.frame.width ,
+                  height: collectionView.frame.height )
   }
   
   
@@ -119,6 +170,7 @@ class DetailTourismVC: UIViewController,UICollectionViewDelegate,UICollectionVie
     )
     collectionView.isPagingEnabled = true
     
-//    collectionView.reloadData()
+    //    collectionView.reloadData()
   }
+  
 }

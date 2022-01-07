@@ -11,10 +11,10 @@ import FirebaseAuth
 
 class SignInVC: UIViewController {
   
+  
   @IBOutlet weak var errorIb: UILabel!
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
-  
   @IBOutlet weak var forgetPassword: UIButton!
   
   override func viewDidLoad() {
@@ -23,15 +23,14 @@ class SignInVC: UIViewController {
     emailTextField.layer.cornerRadius = 18
     passwordTextField.layer.cornerRadius = 18
     hideKeyboardWhenTappedAround()
-    
-    
-    
+ 
   }
-  
-  
-  
+
   
   @IBAction func signInButton(_ sender: UIButton) {
+    
+    
+    
     let email = emailTextField.text!.trimmingCharacters(in:.whitespacesAndNewlines)
     let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
     
@@ -44,17 +43,34 @@ class SignInVC: UIViewController {
         self.errorIb.text = error?.localizedDescription
         
       } else {
-        let storyBord = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyBord.instantiateViewController(withIdentifier: "MainVC")
-        vc.modalPresentationStyle = .overFullScreen
-        self.present(vc, animated: true)
+        let db = Firestore.firestore()
         
+        let documentRF =  db.collection("users").document((authResult?.user.uid)!)
         
+        documentRF.getDocument { snapchot, error in
+          if error != nil {
+            print("~~ error get user data: \(error?.localizedDescription)")
+          } else {
+            
+            let data = snapchot!.data()!
+            let type = data["type"] as! String
+            let storyBord = UIStoryboard(name: "Main", bundle: nil)
+            if type == "owner"{
+              let vc = storyBord.instantiateViewController(withIdentifier: "ownerID")
+              vc.modalPresentationStyle = .overFullScreen
+              self.present(vc, animated: true)
+              
+            } else {
+              let vc = storyBord.instantiateViewController(withIdentifier: "MainVC")
+              vc.modalPresentationStyle = .overFullScreen
+              self.present(vc, animated: true)
+            }
+          }
+        }
       }
     }
-    
   }
-  
+
 }
 
 

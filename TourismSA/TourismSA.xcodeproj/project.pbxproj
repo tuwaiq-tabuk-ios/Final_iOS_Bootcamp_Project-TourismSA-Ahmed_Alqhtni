@@ -9,13 +9,17 @@
 /* Begin PBXBuildFile section */
 		202347152769F5250078DF7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202347142769F5250078DF7A /* AppDelegate.swift */; };
 		202347172769F5250078DF7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202347162769F5250078DF7A /* SceneDelegate.swift */; };
-		202347192769F5250078DF7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202347182769F5250078DF7A /* ViewController.swift */; };
+		202347192769F5250078DF7A /* UsrTourismVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202347182769F5250078DF7A /* UsrTourismVC.swift */; };
 		2023471C2769F5250078DF7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2023471A2769F5250078DF7A /* Main.storyboard */; };
 		2023471E2769F5260078DF7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2023471D2769F5260078DF7A /* Assets.xcassets */; };
 		202347212769F5260078DF7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2023471F2769F5260078DF7A /* LaunchScreen.storyboard */; };
 		202347292769F6D30078DF7A /* TourismTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 202347282769F6D30078DF7A /* TourismTableViewCell.xib */; };
 		2023472B2769F6E70078DF7A /* TourismTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2023472A2769F6E70078DF7A /* TourismTableViewCell.swift */; };
 		2023472E2769F9300078DF7A /* ProfileTourismVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2023472D2769F9300078DF7A /* ProfileTourismVC.swift */; };
+		202B86A02780C8400043859D /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B869F2780C8400043859D /* AddPlaceViewController.swift */; };
+		202B86A22780C9560043859D /* ImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B86A12780C9560043859D /* ImagesCollectionViewCell.swift */; };
+		202B86A62780EF7B0043859D /* MainOwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B86A52780EF7B0043859D /* MainOwnerVC.swift */; };
+		202B86A82780F2DC0043859D /* EditPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B86A72780F2DC0043859D /* EditPlaceVC.swift */; };
 		20631DED2779A9FD0014F901 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20631DEC2779A9FD0014F901 /* CollectionViewCell.swift */; };
 		20631DF12779F6650014F901 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20631DF02779F6650014F901 /* ForgetPasswordVC.swift */; };
 		207976C22770B9AC0081B14A /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207976C12770B9AC0081B14A /* signUpVC.swift */; };
@@ -31,7 +35,7 @@
 		202347112769F5250078DF7A /* TourismSA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TourismSA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		202347142769F5250078DF7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		202347162769F5250078DF7A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		202347182769F5250078DF7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		202347182769F5250078DF7A /* UsrTourismVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsrTourismVC.swift; sourceTree = "<group>"; };
 		2023471B2769F5250078DF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2023471D2769F5260078DF7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		202347202769F5260078DF7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +43,10 @@
 		202347282769F6D30078DF7A /* TourismTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TourismTableViewCell.xib; sourceTree = "<group>"; };
 		2023472A2769F6E70078DF7A /* TourismTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TourismTableViewCell.swift; sourceTree = "<group>"; };
 		2023472D2769F9300078DF7A /* ProfileTourismVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTourismVC.swift; sourceTree = "<group>"; };
+		202B869F2780C8400043859D /* AddPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
+		202B86A12780C9560043859D /* ImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		202B86A52780EF7B0043859D /* MainOwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOwnerVC.swift; sourceTree = "<group>"; };
+		202B86A72780F2DC0043859D /* EditPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlaceVC.swift; sourceTree = "<group>"; };
 		20631DEC2779A9FD0014F901 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		20631DF02779F6650014F901 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
 		207976C12770B9AC0081B14A /* signUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
@@ -85,7 +93,6 @@
 		202347132769F5250078DF7A /* TourismSA */ = {
 			isa = PBXGroup;
 			children = (
-				20631DEC2779A9FD0014F901 /* CollectionViewCell.swift */,
 				207D72E6276A0437001033B6 /* Model */,
 				2023472C2769F8B10078DF7A /* Controller */,
 				202347312769F9650078DF7A /* View */,
@@ -105,10 +112,15 @@
 				20DC287E277092EB005E9ED0 /* SignInVC.swift */,
 				207976C12770B9AC0081B14A /* signUpVC.swift */,
 				2023472A2769F6E70078DF7A /* TourismTableViewCell.swift */,
-				202347182769F5250078DF7A /* ViewController.swift */,
+				202347182769F5250078DF7A /* UsrTourismVC.swift */,
 				20D4350D277AEEB300BBD3FA /* Extension.swift */,
 				2023472D2769F9300078DF7A /* ProfileTourismVC.swift */,
 				207D72E4276A0406001033B6 /* DetailTourismVC.swift */,
+				202B869F2780C8400043859D /* AddPlaceViewController.swift */,
+				202B86A72780F2DC0043859D /* EditPlaceVC.swift */,
+				202B86A12780C9560043859D /* ImagesCollectionViewCell.swift */,
+				202B86A52780EF7B0043859D /* MainOwnerVC.swift */,
+				20631DEC2779A9FD0014F901 /* CollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -274,7 +286,8 @@
 			files = (
 				20631DED2779A9FD0014F901 /* CollectionViewCell.swift in Sources */,
 				20631DF12779F6650014F901 /* ForgetPasswordVC.swift in Sources */,
-				202347192769F5250078DF7A /* ViewController.swift in Sources */,
+				202B86A02780C8400043859D /* AddPlaceViewController.swift in Sources */,
+				202347192769F5250078DF7A /* UsrTourismVC.swift in Sources */,
 				202347152769F5250078DF7A /* AppDelegate.swift in Sources */,
 				207976C22770B9AC0081B14A /* signUpVC.swift in Sources */,
 				20DC287F277092EB005E9ED0 /* SignInVC.swift in Sources */,
@@ -283,6 +296,9 @@
 				20D4350E277AEEB300BBD3FA /* Extension.swift in Sources */,
 				207D72E3276A02A5001033B6 /* Place.swift in Sources */,
 				2023472B2769F6E70078DF7A /* TourismTableViewCell.swift in Sources */,
+				202B86A82780F2DC0043859D /* EditPlaceVC.swift in Sources */,
+				202B86A62780EF7B0043859D /* MainOwnerVC.swift in Sources */,
+				202B86A22780C9560043859D /* ImagesCollectionViewCell.swift in Sources */,
 				2023472E2769F9300078DF7A /* ProfileTourismVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,7 +376,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -415,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -434,7 +450,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5G285Z8X9T;
 				INFOPLIST_FILE = TourismSA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,7 +471,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5G285Z8X9T;
 				INFOPLIST_FILE = TourismSA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
