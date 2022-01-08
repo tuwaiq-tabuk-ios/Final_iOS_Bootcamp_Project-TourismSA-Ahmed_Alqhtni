@@ -8,20 +8,20 @@
 import UIKit
 
 class TourismTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var tourismImage: UIImageView!
-    @IBOutlet weak var tourismName: UILabel!
-    @IBOutlet weak var tourismAddress: UILabel!
+  
+  @IBOutlet weak var tourismImage: UIImageView!
+  @IBOutlet weak var tourismName: UILabel!
+  @IBOutlet weak var tourismAddress: UILabel!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-       
-    }
+  }
+  
+  
+  override func setSelected(_ selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
     
+    }
+  
 }
