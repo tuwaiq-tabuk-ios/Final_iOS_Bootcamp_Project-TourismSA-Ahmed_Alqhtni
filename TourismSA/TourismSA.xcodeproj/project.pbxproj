@@ -93,10 +93,10 @@
 		202347132769F5250078DF7A /* TourismSA */ = {
 			isa = PBXGroup;
 			children = (
+				202347322769FCAD0078DF7A /* Base */,
 				207D72E6276A0437001033B6 /* Model */,
 				2023472C2769F8B10078DF7A /* Controller */,
 				202347312769F9650078DF7A /* View */,
-				202347322769FCAD0078DF7A /* Base */,
 				2023471D2769F5260078DF7A /* Assets.xcassets */,
 				2023471F2769F5260078DF7A /* LaunchScreen.storyboard */,
 				202347222769F5260078DF7A /* Info.plist */,

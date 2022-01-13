@@ -12,12 +12,14 @@ import FirebaseAuth
 class ForgetPasswordVC:
   UIViewController {
   
+  
   @IBOutlet weak var email: UITextField!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     hideKeyboardWhenTappedAround()
   }
+  
   
   @IBAction func forgetPassword(_ sender: Any) {
     let auth = Auth.auth()
@@ -32,10 +34,8 @@ class ForgetPasswordVC:
       let alert = UIAlertController(title: "Succesfully",
                                     message: "A password reset email has been sent!", preferredStyle: UIAlertController.Style.alert)
       
-      
       let action = UIAlertAction(title: "Done", style: .cancel) { UIAlertAction in
         self.navigationController?.popViewController(animated: true)
-        
         
         
       }

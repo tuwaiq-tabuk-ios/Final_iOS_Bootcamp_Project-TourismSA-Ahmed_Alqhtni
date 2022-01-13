@@ -5,7 +5,7 @@
 //  Created by Ahmed awadh alqhtani on 28/05/1443 AH.
 //
 
-import UIKit
+import UIKit 
 import FirebaseAuth
 import Firebase
 import SDWebImage
@@ -13,8 +13,11 @@ import SDWebImage
 class MainOwnerVC: UIViewController {
   
   
+  // MARK: - IBOutlet -
+  
+  
   @IBOutlet weak var tourismTableView: UITableView!
-  @IBOutlet weak var profileButton:UIButton!
+  
   
   var place = [PlaceData]()
   var collectionRF:CollectionReference!
@@ -24,11 +27,10 @@ class MainOwnerVC: UIViewController {
     super.viewDidLoad()
     
     hideKeyboardWhenTappedAround()
+     
     
-    //    self.place = array
     tourismTableView.register(UINib(nibName: "TourismTableViewCell", bundle: nil), forCellReuseIdentifier: "TourismCell")
     let db = Firestore.firestore()
-    
     collectionRF = db.collection("Place")
     
   }
@@ -64,7 +66,9 @@ class MainOwnerVC: UIViewController {
       
       if error != nil {
         print("~~ error get data: \(error?.localizedDescription)")
+      
       } else {
+        
         self.place.removeAll()
         for document in snapshot!.documents {
           let data = document.data()
@@ -87,7 +91,7 @@ class MainOwnerVC: UIViewController {
         }
       }
       
-      self.tourismTableView.reloadData()
+          self.tourismTableView.reloadData()
       
     }
   }
@@ -116,7 +120,7 @@ extension MainOwnerVC : UITableViewDataSource{
       cell.tourismImage.layer.cornerRadius = 21
       
       return cell
-    }else{
+    } else {
       return UITableViewCell()
     }
   }

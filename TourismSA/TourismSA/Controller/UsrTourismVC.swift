@@ -12,16 +12,26 @@ import SDWebImage
 
 class UsrTourismVC: UIViewController {
   
+  
+  //MARK: - property
+  
+  var place = [PlaceData]()
+  var collectionRF: CollectionReference!
+  var isSlideMenuHidden = true
+  
+  
+  //MARK: - IBOutlet
+  
+  
   @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
   @IBOutlet weak var tourismTableView: UITableView!
   @IBOutlet weak var profileButton:
   UIButton!
   
   
-  var place = [PlaceData]()
-  var collectionRF: CollectionReference!
-  var isSlideMenuHidden = true
   
+  
+  //MARK: - IBAction
   
   @IBAction func signOut(_ sender: Any) {
     
@@ -54,6 +64,8 @@ class UsrTourismVC: UIViewController {
   }
   
   
+  //MARK: - lifeCycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     sideMenuConstraint.constant = -200
@@ -64,6 +76,8 @@ class UsrTourismVC: UIViewController {
     let db = Firestore.firestore()
     collectionRF = db.collection("Place")
     getData()
+    tourismTableView.layer.shadowOpacity = 0.7
+    tourismTableView.layer.shadowRadius = 20
   }
   
   
@@ -72,6 +86,8 @@ class UsrTourismVC: UIViewController {
     
   }
   
+  
+  //MARK: - functions
   
   func getData() {
     

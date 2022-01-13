@@ -11,21 +11,28 @@ import FirebaseAuth
 
 class signUpVC: UIViewController {
   
+
+  // MARK: - IBOutlet -
+  
+  
   @IBOutlet weak var errorIb: UILabel!
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var firstNameTextField: UITextField!
   @IBOutlet weak var lastNameTextField: UITextField!
   
+  // - View Controller lifeCycle 
+ 
   
   override func viewDidLoad() {
     super.viewDidLoad()
+  
     
     errorIb.alpha = 0
-    firstNameTextField.layer.cornerRadius = 18
-    lastNameTextField.layer.cornerRadius = 18
-    emailTextField.layer.cornerRadius = 18
-    passwordTextField.layer.cornerRadius = 18
+    firstNameTextField.layer.cornerRadius = 15
+    lastNameTextField.layer.cornerRadius = 15
+    emailTextField.layer.cornerRadius = 15
+    passwordTextField.layer.cornerRadius = 15
     hideKeyboardWhenTappedAround()
     
   }
@@ -48,7 +55,8 @@ class signUpVC: UIViewController {
     let emailTextField = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
     let passwordTextField = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
     
-    Auth.auth().createUser(withEmail: emailTextField, password: passwordTextField) {
+    Auth.auth().createUser(withEmail: emailTextField,
+                           password: passwordTextField) {
       (authResult, error) in
       if error != nil {
         self.errorIb.alpha = 1

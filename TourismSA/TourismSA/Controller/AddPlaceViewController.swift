@@ -17,6 +17,13 @@ class AddPlaceViewController: UIViewController,
 {
   
   
+  // MARk: - property
+  
+  var imageForLogo:Bool!
+  var imagesForPlace:[UIImage] = [UIImage]()
+  
+  
+  // MARk: - IBOutlet
 
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var addressTextField: UITextField!
@@ -27,9 +34,10 @@ class AddPlaceViewController: UIViewController,
   @IBOutlet weak var logoImageView: UIImageView!
   @IBOutlet weak var imagesCollectionView: UICollectionView!
   
-  var imageForLogo:Bool!
-  var imagesForPlace:[UIImage] = [UIImage]()
   
+ 
+  
+  // MARk: - LifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -97,7 +105,6 @@ class AddPlaceViewController: UIViewController,
     imageForLogo = false
     presentPhotoPicker()
   }
-  
   
   
   @IBAction func saveButtonTapped(_ sender: UIButton) {
@@ -170,7 +177,8 @@ class AddPlaceViewController: UIViewController,
   let storeageRF = storeage.reference().child(documentID).child(imageID)
     let data = logoImageView.image!.jpegData(compressionQuality: 0.5)!
 
-    storeageRF.putData(data, metadata: uploadMetadata) { metadata, error in
+    storeageRF.putData(data,
+                       metadata: uploadMetadata) { metadata, error in
       if error != nil {
         print("~~ Error Upload Image: \(error?.localizedDescription)")
       } else {
@@ -187,6 +195,8 @@ class AddPlaceViewController: UIViewController,
     
   }
   
+  // MARk: - function
+  
   
   func presentPhotoPicker() {
     var configuration = PHPickerConfiguration()
@@ -198,12 +208,15 @@ class AddPlaceViewController: UIViewController,
     configuration.filter = .images
     let photoPicker = PHPickerViewController(configuration: configuration)
     photoPicker.delegate = self
-    present(photoPicker, animated: true, completion: nil)
+    present(photoPicker, animated: true,
+            completion: nil)
   }
   
   
-  func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
-    dismiss(animated: true, completion: nil)
+  func picker(_ picker: PHPickerViewController,
+              didFinishPicking results: [PHPickerResult]) {
+    dismiss(animated: true,
+            completion: nil)
     if imageForLogo {
       if let result = results.first, result.itemProvider.canLoadObject(ofClass: UIImage.self) {
         result.itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
@@ -240,6 +253,5 @@ class AddPlaceViewController: UIViewController,
     }
     
   }
-  
   
 }
