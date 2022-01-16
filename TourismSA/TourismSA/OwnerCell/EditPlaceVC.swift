@@ -5,7 +5,8 @@
 //  Created by Ahmed awadh alqhtani on 28/05/1443 AH.
 //
 
-import UIKit
+
+
 import PhotosUI
 import Firebase
 import FirebaseStorage
@@ -13,11 +14,17 @@ import SDWebImage
 
 class EditPlaceVC: UIViewController,
                    UICollectionViewDelegate {
+ 
+  
+  // MARk: - proprty
   
   var imageForLogo: Bool!
   var imagesForPlace: [UIImage] = [UIImage]()
   var placeData: PlaceData!
   var ID: String!
+  
+  
+  // MARK: - IBOutlet -
   
   
   @IBOutlet weak var nameTextField: UITextField!
@@ -29,6 +36,8 @@ class EditPlaceVC: UIViewController,
   @IBOutlet weak var logoImageView: UIImageView!
   @IBOutlet weak var imagesCollectionView: UICollectionView!
   
+  
+  // MARK: - Life Cycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -44,8 +53,7 @@ class EditPlaceVC: UIViewController,
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
-    //    print("\n\n --------  \(#file) - \(#function)")
-    //    configureScreen()
+    
   }
   
   
@@ -110,7 +118,6 @@ class EditPlaceVC: UIViewController,
     uploadMetadata.contentType = "image/jpeg"
     
     var imageData = [Data]()
-    
     for image in imagesForPlace {
       let data = image.jpegData(compressionQuality: 0.5)
       imageData.append(data!)
@@ -121,9 +128,7 @@ class EditPlaceVC: UIViewController,
       imageID = UUID().uuidString
       
       let storeageRF = storeage.reference().child(documentID).child(imageID)
-      
       storeage.reference().child(documentID).delete()
-      
       storeageRF.putData(data, metadata: uploadMetadata) { metadata, error in
         if error != nil {
           print("~~ Error Upload Image: \(error?.localizedDescription)")
@@ -135,6 +140,7 @@ class EditPlaceVC: UIViewController,
               
               images.append(url!.absoluteString)
               db.collection("Place").document(documentID).setData(["images":images], merge: true)
+              self.navigationController?.popViewController(animated: true)
             }
           }
         }
@@ -163,7 +169,7 @@ class EditPlaceVC: UIViewController,
     
   }
   
-
+  
   // MARK: - Configure screen
   
   func configureScreen() {
@@ -175,47 +181,45 @@ class EditPlaceVC: UIViewController,
     latitudeTextField.text = String(placeData.latitude)
     likeTextField.text = String(placeData.like)
     infoTextField.text = placeData.description
-   
+    
     print(" - ID: \(placeData.id)")
     logoImageView.sd_setImage(with: URL(string: placeData.image),
                               placeholderImage: UIImage(named: "IMG_1287"))
-
+    
     print(" - placeData.images: \(placeData.images)")
     
     for imageFromPlaceData in placeData.images {
       let imageView = UIImageView()
       
       print(" ------ imageFromPlaceData: \(imageFromPlaceData)")
-      //            imageView.sd_setImage(with: URL(string: imageFromPlaceData),
-      //                                  placeholderImage: UIImage(named: "IMG_1287"))
+                  imageView.sd_setImage(with: URL(string: imageFromPlaceData),
+                                        placeholderImage: UIImage(named: "IMG_1287"))
       
       let testURL = URL(string: imageFromPlaceData)
       print(" - testURL: \(String(describing: testURL))")
-    
-      // NO
-      //cell.imageView?.sd_setImage(with: url, placeholderImage: UIImage(named: “placeholder"))
+      
+      
       
       imageView.sd_setImage(
-        with: URL(string: imageFromPlaceData)) { sdImage, error, _,_ in
+        with: URL(string: imageFromPlaceData)) { sdImage,
+          error, _,_ in
           if error != nil {
-            print("PPPPPPPPPPPPPPPPPPPPPPPPPPPP ERROR: Nil downloading sdImage")
+           
           } else {
             
             print(" + + + + + sdImage: \(String(describing: sdImage))")
             self.imagesForPlace.append(sdImage!)
           }
         }
-      //        let imagee = imageView.image
-      //        print(" + + + + + imagee: \(imagee)")
-      //        imagesForPlace.append(imagee!)
+      
     }
     
     print(" - - - - imagesForPlace: \(imagesForPlace)")
-    // شفلك حل بخصوص الصور وغالبا انه من السطر رقم ١٧٣ و ١٨٥
-   
+  
+    
     self.imagesCollectionView.reloadData()
     print(" - AFTER: self.imagesCollectionView.reloadData()")
- 
+    
   }
   
   
@@ -276,11 +280,8 @@ extension EditPlaceVC: PHPickerViewControllerDelegate {
     if imageForLogo {
       if let result = results.first,
          result.itemProvider.canLoadObject(ofClass: UIImage.self) {
-        result.itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
+         result.itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
           if let image = image as? UIImage {
-            // Store the image in the ImageStore for the item's key
-            
-            // Put that image on the screen in the image view
             DispatchQueue.main.async {
               self.logoImageView.image = image
             }

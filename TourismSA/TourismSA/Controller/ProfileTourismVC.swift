@@ -12,10 +12,15 @@ import FirebaseAuth
 
 class ProfileTourismVC: UIViewController {
   
+  //MARK: - IBOutlet
+  
   
   @IBOutlet weak var firstNameTextField: UITextField!
   @IBOutlet weak var lastNameTextField: UITextField!
   @IBOutlet weak var emailTextField: UITextField!
+  
+  
+  //MARK: - lifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -59,6 +64,4 @@ class ProfileTourismVC: UIViewController {
     })
     
   }
-  
-  
 }

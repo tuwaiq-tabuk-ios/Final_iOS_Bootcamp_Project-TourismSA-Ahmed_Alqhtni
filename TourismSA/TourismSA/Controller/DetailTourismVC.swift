@@ -10,19 +10,12 @@ import MapKit
 import AVFAudio
 import AVFoundation
 
-class DetailTourismVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+class DetailTourismVC: UIViewController,
+                       UICollectionViewDelegate,
+                       UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
   
   
-  @IBOutlet weak var detailImage: UIImageView!
-  @IBOutlet weak var detailName: UILabel!
-  @IBOutlet weak var detailAddress: UILabel!
-  @IBOutlet weak var detailDescription: UILabel!
-  @IBOutlet weak var detailLikes: UILabel!
-  @IBOutlet weak var iconMap: UIImageView!
-  @IBOutlet weak var mapKit: MKMapView!
-  @IBOutlet weak var collectionView: UICollectionView!
-  
-  
+  // MARk: - property
   
   var arrImage = [String]()
   var timer :Timer?
@@ -36,6 +29,22 @@ class DetailTourismVC: UIViewController,UICollectionViewDelegate,UICollectionVie
   }
   
   
+  //MARK: - IBOutlet
+  
+  @IBOutlet weak var detailImage: UIImageView!
+  @IBOutlet weak var detailName: UILabel!
+  @IBOutlet weak var detailAddress: UILabel!
+  @IBOutlet weak var detailDescription: UILabel!
+  @IBOutlet weak var detailLikes: UILabel!
+  @IBOutlet weak var iconMap: UIImageView!
+  @IBOutlet weak var mapKit: MKMapView!
+  @IBOutlet weak var collectionView: UICollectionView!
+  
+ 
+  
+  
+  // MARk: - lifeCycle
+  
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
     if synthesizer.isSpeaking {
@@ -44,11 +53,15 @@ class DetailTourismVC: UIViewController,UICollectionViewDelegate,UICollectionVie
   }
   
   
+  // MARk: - IBAction
+  
   @IBAction func talk(_ sender: Any) {
     
     talks(place!.description)
     
   }
+  
+  // MARk: - LifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -89,13 +102,14 @@ class DetailTourismVC: UIViewController,UICollectionViewDelegate,UICollectionVie
       let region = MKCoordinateRegion(center: anotation.coordinate,
                                       latitudinalMeters: 100000,
                                       longitudinalMeters: 100000)
-      mapKit.setRegion(region,
-                       animated: true)
-      
-      
+                                      mapKit.setRegion(region,
+                                      animated: true)
       
     }
   }
+  
+  
+  // MARk: - function
   
   func talks(_ string:String) {
     let utterance = AVSpeechUtterance(string:string)

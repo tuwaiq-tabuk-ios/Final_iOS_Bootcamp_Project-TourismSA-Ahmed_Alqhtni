@@ -3,7 +3,6 @@
 //  TourismSA
 //
 //  Created by Ahmed awadh alqhtani on 24/05/1443 AH.
-//
 
 import UIKit
 
@@ -15,6 +14,7 @@ extension UIViewController {
     tap.cancelsTouchesInView = false
     view.addGestureRecognizer(tap)
     
+
   }
   
   

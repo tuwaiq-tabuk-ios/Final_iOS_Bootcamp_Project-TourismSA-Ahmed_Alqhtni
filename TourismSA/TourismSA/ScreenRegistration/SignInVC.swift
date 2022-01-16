@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+
 class SignInVC: UIViewController {
   
   
@@ -16,6 +17,7 @@ class SignInVC: UIViewController {
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var forgetPassword: UIButton!
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -29,8 +31,7 @@ class SignInVC: UIViewController {
   
   @IBAction func signInButton(_ sender: UIButton) {
     
-    
-    
+  
     let email = emailTextField.text!.trimmingCharacters(in:.whitespacesAndNewlines)
     let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
     
@@ -70,7 +71,7 @@ class SignInVC: UIViewController {
       }
     }
   }
-
+ 
 }
 
 
