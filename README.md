@@ -12,6 +12,6 @@ People interested in tourism and exploring distinctive areas and monuments in th
 
 
 ## User stories
-   - Add an introductory text or a brief, pictures, and videos about the place.
+   - Add an introductory text or a brief, pictures, and  about the place.
    - Add a reader to the introductory text in the written place, for people who prefer to listen rather than read.
    - Add a map to display the location and locate it.
