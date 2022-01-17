@@ -10,6 +10,7 @@ import PhotosUI
 import Firebase
 import FirebaseStorage
 
+
 class AddPlaceViewController: UIViewController,
                               UICollectionViewDelegate,
                               UICollectionViewDataSource,
@@ -19,12 +20,14 @@ class AddPlaceViewController: UIViewController,
   
   // MARk: - property
   
+  
   var imageForLogo:Bool!
   var imagesForPlace:[UIImage] = [UIImage]()
   
   
   // MARk: - IBOutlet
 
+  
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var addressTextField: UITextField!
   @IBOutlet weak var longitudeTextField: UITextField!
@@ -35,7 +38,6 @@ class AddPlaceViewController: UIViewController,
   @IBOutlet weak var imagesCollectionView: UICollectionView!
   
   
- 
   
   // MARk: - LifeCycle
   
@@ -67,6 +69,7 @@ class AddPlaceViewController: UIViewController,
   func collectionView(_ collectionView: UICollectionView,
                       numberOfItemsInSection section: Int) -> Int {
     return imagesForPlace.count
+
   }
   
   
@@ -75,8 +78,7 @@ class AddPlaceViewController: UIViewController,
   -> UICollectionViewCell {
    
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell",
-                                                  for: indexPath) as! ImagesCollectionViewCell
-    
+                                    for: indexPath) as! ImagesCollectionViewCell
     cell.imagePlace.image = imagesForPlace[indexPath.row]
     cell.deleteImage.tag = indexPath.row
   
@@ -95,11 +97,13 @@ class AddPlaceViewController: UIViewController,
     
   }
   
+  
   @IBAction func addLogoButtonTapped(_ sender: UIButton) {
     imageForLogo = true
     presentPhotoPicker()
     
   }
+  
   
   @IBAction func addImagesButtonTapped(_ sender: UIButton) {
     imageForLogo = false
@@ -115,6 +119,7 @@ class AddPlaceViewController: UIViewController,
     if imageID == "" {
       imageID = UUID().uuidString
     }
+    
     let documentID = UUID().uuidString
 
     db.collection("Place").document(documentID).setData([
@@ -129,14 +134,11 @@ class AddPlaceViewController: UIViewController,
       "images":[] as Array
     ]) { error in
       if error != nil {
-        print("~~ Error Add Document: \(error?.localizedDescription)")
+        print("~~ Error Add Document: \(String(describing: error?.localizedDescription))")
       } else {
-        
-        
         
       }
     }
-    
     
     let storeage = Storage.storage()
     let uploadMetadata = StorageMetadata()
@@ -171,7 +173,6 @@ class AddPlaceViewController: UIViewController,
       }
     }
 
-
     imageID = UUID().uuidString
 
   let storeageRF = storeage.reference().child(documentID).child(imageID)
@@ -180,20 +181,19 @@ class AddPlaceViewController: UIViewController,
     storeageRF.putData(data,
                        metadata: uploadMetadata) { metadata, error in
       if error != nil {
-        print("~~ Error Upload Image: \(error?.localizedDescription)")
+        print("~~ Error Upload Image: \(String(describing: error?.localizedDescription))")
       } else {
         storeageRF.downloadURL { url, error in
           if error != nil {
-            print("~~ Error url Image: \(error?.localizedDescription)")
+            print("~~ Error url Image: \(String(describing: error?.localizedDescription))")
           } else {
             db.collection("Place").document(documentID).setData(["image":url?.absoluteString], merge: true)
           }
         }
       }
     }
-    
-    
   }
+  
   
   // MARk: - function
   
@@ -227,11 +227,8 @@ class AddPlaceViewController: UIViewController,
             DispatchQueue.main.async {
               self.logoImageView.image = image
             }
-            
           }
-          
         }
-        
       }
     } else {
       
@@ -242,16 +239,9 @@ class AddPlaceViewController: UIViewController,
               self.imagesForPlace.append(image)
               self.imagesCollectionView.reloadData()
             }
-            
           }
-          
         }
-        
       }
-      
-      
     }
-    
   }
-  
 }
