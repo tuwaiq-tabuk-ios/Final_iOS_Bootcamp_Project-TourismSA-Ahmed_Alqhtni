@@ -816,7 +816,7 @@ So that the application helps the tourist to identify the displayed areas, get a
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="aMl-bn-JTd">
-                                <rect key="frame" x="77" y="339.5" width="260" height="417"/>
+                                <rect key="frame" x="77" y="305" width="260" height="486"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="BIz-eW-qHv">
                                         <rect key="frame" x="5" y="0.0" width="250" height="166"/>
@@ -863,10 +863,10 @@ So that the application helps the tourist to identify the displayed areas, get a
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="AC5-fc-fcv">
-                                        <rect key="frame" x="30" y="329" width="200" height="88"/>
+                                        <rect key="frame" x="0.0" y="329" width="260" height="157"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RzZ-RU-JoE">
-                                                <rect key="frame" x="0.0" y="0.0" width="200" height="34"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="39"/>
                                                 <color key="backgroundColor" name="Co"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="Sign In">
@@ -881,11 +881,20 @@ So that the application helps the tourist to identify the displayed areas, get a
                                                     <action selector="signInButton:" destination="Z7E-Om-w41" eventType="touchUpInside" id="Mf1-B5-M7D"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Le6-nh-b0N">
+                                                <rect key="frame" x="0.0" y="59" width="260" height="39"/>
+                                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="SignUp Owner"/>
+                                                <connections>
+                                                    <segue destination="Hyg-3r-Gg8" kind="show" id="0y7-3F-fDV"/>
+                                                </connections>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssI-Hd-y15">
-                                                <rect key="frame" x="0.0" y="54" width="200" height="34"/>
+                                                <rect key="frame" x="0.0" y="118" width="260" height="39"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <state key="normal" title="Sign Up">
-                                                    <color key="titleColor" name="Co"/>
+                                                    <color key="titleColor" name="AccentColor"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="uNw-YM-CkL" kind="show" id="vin-UV-vP9"/>
@@ -893,29 +902,27 @@ So that the application helps the tourist to identify the displayed areas, get a
                                             </button>
                                         </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Le6-nh-b0N" secondAttribute="trailing" id="2DE-Vw-dVl"/>
                                             <constraint firstAttribute="trailing" secondItem="RzZ-RU-JoE" secondAttribute="trailing" id="Cvu-eM-BGK"/>
+                                            <constraint firstItem="Le6-nh-b0N" firstAttribute="top" secondItem="RzZ-RU-JoE" secondAttribute="bottom" constant="20" id="LMn-kN-O4V"/>
                                             <constraint firstItem="RzZ-RU-JoE" firstAttribute="leading" secondItem="AC5-fc-fcv" secondAttribute="leading" id="Qo5-YN-ZAC"/>
+                                            <constraint firstItem="Le6-nh-b0N" firstAttribute="leading" secondItem="AC5-fc-fcv" secondAttribute="leading" id="ZFk-vv-GgL"/>
                                             <constraint firstItem="RzZ-RU-JoE" firstAttribute="top" secondItem="AC5-fc-fcv" secondAttribute="top" id="rJY-Z1-hcU"/>
+                                            <constraint firstItem="ssI-Hd-y15" firstAttribute="top" secondItem="Le6-nh-b0N" secondAttribute="bottom" constant="20" id="y12-nv-9EU"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="23L-OA-dhT"/>
-                                    <constraint firstAttribute="trailing" secondItem="RzZ-RU-JoE" secondAttribute="trailing" constant="30" id="3GJ-qb-ahG"/>
-                                    <constraint firstItem="e1B-SS-cn8" firstAttribute="top" secondItem="BIz-eW-qHv" secondAttribute="bottom" constant="66" id="3y8-sc-jlk"/>
-                                    <constraint firstItem="AC5-fc-fcv" firstAttribute="top" secondItem="e1B-SS-cn8" secondAttribute="bottom" constant="66" id="DJf-Ap-R0o"/>
-                                    <constraint firstItem="RzZ-RU-JoE" firstAttribute="leading" secondItem="aMl-bn-JTd" secondAttribute="leading" constant="30" id="RZl-xi-2gU"/>
                                     <constraint firstAttribute="bottom" secondItem="AC5-fc-fcv" secondAttribute="bottom" id="VeA-Kl-Pbg"/>
-                                    <constraint firstAttribute="bottom" secondItem="RzZ-RU-JoE" secondAttribute="bottom" constant="54" id="b9s-k9-SIs"/>
-                                    <constraint firstAttribute="trailing" secondItem="AC5-fc-fcv" secondAttribute="trailing" constant="30" id="nBG-Jv-c1I"/>
-                                    <constraint firstItem="AC5-fc-fcv" firstAttribute="leading" secondItem="aMl-bn-JTd" secondAttribute="leading" constant="30" id="ou3-2I-qEw"/>
+                                    <constraint firstItem="AC5-fc-fcv" firstAttribute="leading" secondItem="aMl-bn-JTd" secondAttribute="leading" id="ou3-2I-qEw"/>
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuG-qZ-jrg">
-                                <rect key="frame" x="10" y="766.5" width="394" height="85.5"/>
+                                <rect key="frame" x="10" y="801" width="394" height="51"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing in info TourismSA you agree to our User Agreement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O9k-7P-Qui">
-                                        <rect key="frame" x="10" y="10" width="374" height="68"/>
+                                        <rect key="frame" x="10" y="10" width="374" height="33.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" name="Co"/>
@@ -931,7 +938,7 @@ So that the application helps the tourist to identify the displayed areas, get a
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1287" translatesAutoresizingMaskIntoConstraints="NO" id="UqQ-O2-OK5">
-                                <rect key="frame" x="5" y="35" width="404" height="299.5"/>
+                                <rect key="frame" x="5" y="35" width="404" height="265"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -1127,14 +1134,14 @@ So that the application helps the tourist to identify the displayed areas, get a
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nw2-Ka-zdM">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="confirm password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nw2-Ka-zdM">
                                                 <rect key="frame" x="20" y="156" width="334" height="40"/>
                                                 <color key="backgroundColor" systemColor="systemFillColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="nun-kw-Bm5"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <constraints>
@@ -1566,6 +1573,199 @@ So that the application helps the tourist to identify the displayed areas, get a
             </objects>
             <point key="canvasLocation" x="1338" y="503"/>
         </scene>
+        <!--Owner Sgin UpVC-->
+        <scene sceneID="OD6-Xh-Pdz">
+            <objects>
+                <viewController id="Hyg-3r-Gg8" customClass="OwnerSginUpVC" customModule="TourismSA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qnu-p5-Rie">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="79f-HI-roX">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4hQ-BJ-0dN">
+                                <rect key="frame" x="10" y="676" width="394" height="176"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing in info ToursimSA you agree to our User Agreement" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y52-mC-xjp">
+                                        <rect key="frame" x="10" y="10" width="374" height="158.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" name="Co"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.11372549830000001" green="0.11372549830000001" blue="0.12549020350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="y52-mC-xjp" secondAttribute="trailing" constant="10" id="F1b-8D-91f"/>
+                                    <constraint firstItem="y52-mC-xjp" firstAttribute="top" secondItem="4hQ-BJ-0dN" secondAttribute="top" constant="10" id="Lg2-TK-nWY"/>
+                                    <constraint firstItem="y52-mC-xjp" firstAttribute="leading" secondItem="4hQ-BJ-0dN" secondAttribute="leading" constant="10" id="Mjv-hi-qoN"/>
+                                    <constraint firstAttribute="bottom" secondItem="y52-mC-xjp" secondAttribute="bottom" constant="7.5" id="qr3-Zt-qmf"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="qjc-tQ-TM1">
+                                <rect key="frame" x="0.0" y="88" width="414" height="588"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ps5-0N-huF">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_1287" translatesAutoresizingMaskIntoConstraints="NO" id="PiT-Tw-XsG">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="PiT-Tw-XsG" firstAttribute="leading" secondItem="ps5-0N-huF" secondAttribute="leading" id="AZD-ND-Xad"/>
+                                            <constraint firstAttribute="trailing" secondItem="PiT-Tw-XsG" secondAttribute="trailing" id="TrW-Pm-o0v"/>
+                                            <constraint firstItem="PiT-Tw-XsG" firstAttribute="top" secondItem="ps5-0N-huF" secondAttribute="top" id="U2s-Vp-hDc"/>
+                                            <constraint firstAttribute="height" constant="160" id="d2x-aC-etW"/>
+                                            <constraint firstAttribute="bottom" secondItem="PiT-Tw-XsG" secondAttribute="bottom" id="hlm-ip-7Cz"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dJ7-Jx-l2l">
+                                        <rect key="frame" x="20" y="226" width="374" height="196"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fxQ-W4-gIz">
+                                                <rect key="frame" x="20" y="0.0" width="334" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="Isy-AL-IuE"/>
+                                                </constraints>
+                                                <color key="textColor" name="Co"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7vo-Kz-qoQ">
+                                                <rect key="frame" x="20" y="39" width="334" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="xOP-XG-rjH"/>
+                                                </constraints>
+                                                <color key="textColor" name="Co"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rlp-jS-uON">
+                                                <rect key="frame" x="20" y="78" width="334" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="sr2-Xs-S94"/>
+                                                </constraints>
+                                                <color key="textColor" name="Co"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zVd-1I-mrn">
+                                                <rect key="frame" x="20" y="117" width="334" height="34"/>
+                                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="ZQn-Rh-f4Z"/>
+                                                </constraints>
+                                                <color key="textColor" name="Co"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="confirm password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qet-1t-DEx">
+                                                <rect key="frame" x="20" y="156" width="334" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemFillColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="eon-gp-Q1k"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Qet-1t-DEx" firstAttribute="top" secondItem="zVd-1I-mrn" secondAttribute="bottom" constant="5" id="27v-Fm-me2"/>
+                                            <constraint firstAttribute="trailing" secondItem="fxQ-W4-gIz" secondAttribute="trailing" constant="20" id="ALl-Zh-CnJ"/>
+                                            <constraint firstItem="rlp-jS-uON" firstAttribute="leading" secondItem="dJ7-Jx-l2l" secondAttribute="leading" constant="20" id="BQT-ir-vc0"/>
+                                            <constraint firstItem="7vo-Kz-qoQ" firstAttribute="leading" secondItem="dJ7-Jx-l2l" secondAttribute="leading" constant="20" id="GNa-HF-TbB"/>
+                                            <constraint firstAttribute="trailing" secondItem="Qet-1t-DEx" secondAttribute="trailing" constant="20" id="JRA-0v-FLC"/>
+                                            <constraint firstAttribute="trailing" secondItem="rlp-jS-uON" secondAttribute="trailing" constant="20" id="N6k-Oh-WgY"/>
+                                            <constraint firstItem="Qet-1t-DEx" firstAttribute="leading" secondItem="dJ7-Jx-l2l" secondAttribute="leading" constant="20" id="Obo-Bi-z9F"/>
+                                            <constraint firstItem="fxQ-W4-gIz" firstAttribute="top" secondItem="dJ7-Jx-l2l" secondAttribute="top" id="RnM-2v-ugb"/>
+                                            <constraint firstItem="rlp-jS-uON" firstAttribute="top" secondItem="7vo-Kz-qoQ" secondAttribute="bottom" constant="5" id="VV7-6M-koc"/>
+                                            <constraint firstItem="fxQ-W4-gIz" firstAttribute="leading" secondItem="dJ7-Jx-l2l" secondAttribute="leading" constant="20" id="idt-6x-2Yz"/>
+                                            <constraint firstItem="zVd-1I-mrn" firstAttribute="leading" secondItem="dJ7-Jx-l2l" secondAttribute="leading" constant="20" id="nTA-we-oUA"/>
+                                            <constraint firstAttribute="trailing" secondItem="7vo-Kz-qoQ" secondAttribute="trailing" constant="20" id="rQv-gI-ugc"/>
+                                            <constraint firstAttribute="trailing" secondItem="zVd-1I-mrn" secondAttribute="trailing" constant="20" id="ye5-ys-lbn"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dN5-2L-6nT">
+                                        <rect key="frame" x="40" y="488" width="334" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTI-Zf-Xy4">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uhy-ps-zGT">
+                                                <rect key="frame" x="0.0" y="60" width="334" height="40"/>
+                                                <color key="backgroundColor" name="Co"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="khI-hA-1QM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <state key="normal" title="Sign Up">
+                                                    <color key="titleColor" name="text"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="signInButton:" destination="Hyg-3r-Gg8" eventType="touchUpInside" id="XXT-EQ-wCM"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dN5-2L-6nT" firstAttribute="top" secondItem="dJ7-Jx-l2l" secondAttribute="bottom" constant="66" id="FuI-90-3Pk"/>
+                                    <constraint firstAttribute="trailing" secondItem="dN5-2L-6nT" secondAttribute="trailing" constant="40" id="MPw-cI-sMm"/>
+                                    <constraint firstAttribute="trailing" secondItem="dJ7-Jx-l2l" secondAttribute="trailing" constant="20" id="ToU-XJ-Qsq"/>
+                                    <constraint firstItem="dN5-2L-6nT" firstAttribute="leading" secondItem="qjc-tQ-TM1" secondAttribute="leading" constant="40" id="XRE-p5-mXb"/>
+                                    <constraint firstItem="dJ7-Jx-l2l" firstAttribute="leading" secondItem="qjc-tQ-TM1" secondAttribute="leading" constant="20" id="kBW-Yv-wdz"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="i9J-Wm-R61"/>
+                        <color key="backgroundColor" name="Color-1"/>
+                        <constraints>
+                            <constraint firstItem="4hQ-BJ-0dN" firstAttribute="top" secondItem="qjc-tQ-TM1" secondAttribute="bottom" id="2IM-eQ-NKM"/>
+                            <constraint firstItem="i9J-Wm-R61" firstAttribute="trailing" secondItem="qjc-tQ-TM1" secondAttribute="trailing" id="BCR-fF-rcI"/>
+                            <constraint firstItem="i9J-Wm-R61" firstAttribute="trailing" secondItem="4hQ-BJ-0dN" secondAttribute="trailing" constant="10" id="KFI-YA-zBK"/>
+                            <constraint firstItem="i9J-Wm-R61" firstAttribute="bottom" secondItem="4hQ-BJ-0dN" secondAttribute="bottom" constant="10" id="Mi6-jo-skq"/>
+                            <constraint firstAttribute="trailing" secondItem="79f-HI-roX" secondAttribute="trailing" id="QQW-OY-QvJ"/>
+                            <constraint firstItem="79f-HI-roX" firstAttribute="leading" secondItem="qnu-p5-Rie" secondAttribute="leading" id="UMo-rZ-4TK"/>
+                            <constraint firstItem="4hQ-BJ-0dN" firstAttribute="leading" secondItem="i9J-Wm-R61" secondAttribute="leading" constant="10" id="au2-4h-V0l"/>
+                            <constraint firstItem="79f-HI-roX" firstAttribute="top" secondItem="qnu-p5-Rie" secondAttribute="top" id="gXI-rX-hqt"/>
+                            <constraint firstItem="qjc-tQ-TM1" firstAttribute="leading" secondItem="i9J-Wm-R61" secondAttribute="leading" id="nUW-0j-Sju"/>
+                            <constraint firstAttribute="bottom" secondItem="79f-HI-roX" secondAttribute="bottom" id="udd-CA-suG"/>
+                            <constraint firstItem="qjc-tQ-TM1" firstAttribute="top" secondItem="i9J-Wm-R61" secondAttribute="top" id="w2K-B0-eKT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="bKl-xe-crV"/>
+                    <connections>
+                        <outlet property="PasswordVerification" destination="Qet-1t-DEx" id="kVy-dN-7IH"/>
+                        <outlet property="emailTextField" destination="rlp-jS-uON" id="Vri-gy-g23"/>
+                        <outlet property="errorIb" destination="uTI-Zf-Xy4" id="7v0-X0-F3w"/>
+                        <outlet property="firstNameTextField" destination="fxQ-W4-gIz" id="ikK-2j-JPH"/>
+                        <outlet property="lastNameTextField" destination="7vo-Kz-qoQ" id="N85-TD-1AC"/>
+                        <outlet property="passwordTextField" destination="zVd-1I-mrn" id="D80-fr-ezA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O1D-fC-HS0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3054" y="1247"/>
+        </scene>
     </scenes>
     <resources>
         <image name=" " width="128" height="128"/>
@@ -1607,6 +1807,9 @@ So that the application helps the tourist to identify the displayed areas, get a
         </systemColor>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
