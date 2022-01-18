@@ -127,7 +127,8 @@ extension MainOwnerVC : UITableViewDataSource{
 }
 
 
-extension MainOwnerVC: UITableViewDelegate{
+
+extension MainOwnerVC: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
     let storyboard = UIStoryboard(name: "Main", bundle: nil)

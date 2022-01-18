@@ -131,11 +131,11 @@ class EditPlaceVC: UIViewController,
       storeage.reference().child(documentID).delete()
       storeageRF.putData(data, metadata: uploadMetadata) { metadata, error in
         if error != nil {
-          print("~~ Error Upload Image: \(error?.localizedDescription)")
+          print("~~ Error Upload Image: \(String(describing: error?.localizedDescription))")
         } else {
           storeageRF.downloadURL { url, error in
             if error != nil {
-              print("~~ Error url Image: \(error?.localizedDescription)")
+              print("~~ Error url Image: \(String(describing: error?.localizedDescription))")
             } else {
               
               images.append(url!.absoluteString)
@@ -155,11 +155,11 @@ class EditPlaceVC: UIViewController,
     
     storeageRF.putData(data, metadata: uploadMetadata) { metadata, error in
       if error != nil {
-        print("~~ Error Upload Image: \(error?.localizedDescription)")
+        print("~~ Error Upload Image: \(String(describing: error?.localizedDescription))")
       } else {
         storeageRF.downloadURL { url, error in
           if error != nil {
-            print("~~ Error url Image: \(error?.localizedDescription)")
+            print("~~ Error url Image: \(String(describing: error?.localizedDescription))")
           } else {
             db.collection("Place").document(documentID).setData(["image":url?.absoluteString], merge: true)
           }
@@ -186,7 +186,7 @@ class EditPlaceVC: UIViewController,
     logoImageView.sd_setImage(with: URL(string: placeData.image),
                               placeholderImage: UIImage(named: "IMG_1287"))
     
-    print(" - placeData.images: \(placeData.images)")
+    print(" - placeData.images: \(String(describing: placeData.images))")
     
     for imageFromPlaceData in placeData.images {
       let imageView = UIImageView()

@@ -52,7 +52,7 @@ class ProfileTourismVC: UIViewController {
     let userID = Auth.auth().currentUser?.uid
     Auth.auth().currentUser?.updateEmail(to: emailTextField.text!, completion: { error in
       if error != nil {
-        print("Error Update Email: \(error?.localizedDescription)")
+        print("Error Update Email: \(String(describing: error?.localizedDescription))")
       } else {
         UserDefaults.standard.setValue(self.emailTextField.text!, forKey: "email")
         UserDefaults.standard.synchronize()

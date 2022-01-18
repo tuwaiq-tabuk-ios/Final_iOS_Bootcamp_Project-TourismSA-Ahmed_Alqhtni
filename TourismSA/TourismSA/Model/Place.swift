@@ -21,5 +21,6 @@ struct PlaceData {
   let like: Int
   let image: String
   let images:[String]!
+
 }
 

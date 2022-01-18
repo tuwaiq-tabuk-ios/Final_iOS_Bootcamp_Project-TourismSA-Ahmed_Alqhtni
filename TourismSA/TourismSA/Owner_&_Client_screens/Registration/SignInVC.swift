@@ -3,7 +3,7 @@
 //  TourismSA
 //
 //  Created by Ahmed awadh alqhtani on 16/05/1443 AH.
-//
+
 
 import UIKit
 import Firebase
@@ -50,7 +50,7 @@ class SignInVC: UIViewController {
         
         documentRF.getDocument { snapchot, error in
           if error != nil {
-            print("~~ error get user data: \(error?.localizedDescription)")
+            print("~~ error get user data: \(String(describing: error?.localizedDescription))")
           } else {
             
             let data = snapchot!.data()!
@@ -71,7 +71,4 @@ class SignInVC: UIViewController {
       }
     }
   }
- 
 }
-
-
