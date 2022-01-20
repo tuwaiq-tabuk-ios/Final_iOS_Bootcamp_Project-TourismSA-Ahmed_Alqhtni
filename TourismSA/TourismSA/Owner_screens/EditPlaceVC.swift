@@ -14,7 +14,7 @@ import SDWebImage
 
 class EditPlaceVC: UIViewController,
                    UICollectionViewDelegate {
- 
+  
   
   // MARk: - proprty
   
@@ -106,7 +106,7 @@ class EditPlaceVC: UIViewController,
       "images" : [] as Array
     ]) { error in
       if error != nil {
-        print("~~ Error Add Document: \(error?.localizedDescription)")
+        print("~~ Error Add Document: \(String(describing: error?.localizedDescription))")
       } else {
         
       }
@@ -192,8 +192,8 @@ class EditPlaceVC: UIViewController,
       let imageView = UIImageView()
       
       print(" ------ imageFromPlaceData: \(imageFromPlaceData)")
-                  imageView.sd_setImage(with: URL(string: imageFromPlaceData),
-                                        placeholderImage: UIImage(named: "IMG_1287"))
+      imageView.sd_setImage(with: URL(string: imageFromPlaceData),
+                            placeholderImage: UIImage(named: "IMG_1287"))
       
       let testURL = URL(string: imageFromPlaceData)
       print(" - testURL: \(String(describing: testURL))")
@@ -204,7 +204,7 @@ class EditPlaceVC: UIViewController,
         with: URL(string: imageFromPlaceData)) { sdImage,
           error, _,_ in
           if error != nil {
-           
+            
           } else {
             
             print(" + + + + + sdImage: \(String(describing: sdImage))")
@@ -215,7 +215,7 @@ class EditPlaceVC: UIViewController,
     }
     
     print(" - - - - imagesForPlace: \(imagesForPlace)")
-  
+    
     
     self.imagesCollectionView.reloadData()
     print(" - AFTER: self.imagesCollectionView.reloadData()")
@@ -280,7 +280,7 @@ extension EditPlaceVC: PHPickerViewControllerDelegate {
     if imageForLogo {
       if let result = results.first,
          result.itemProvider.canLoadObject(ofClass: UIImage.self) {
-         result.itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
+        result.itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
           if let image = image as? UIImage {
             DispatchQueue.main.async {
               self.logoImageView.image = image

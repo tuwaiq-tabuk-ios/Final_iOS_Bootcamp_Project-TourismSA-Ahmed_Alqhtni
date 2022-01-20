@@ -13,8 +13,8 @@ import FirebaseStorage
 
 class AddPlaceViewController: UIViewController,
                               UICollectionViewDelegate,
-                              UICollectionViewDataSource,
-                              PHPickerViewControllerDelegate
+                              UICollectionViewDataSource
+
 {
   
   
@@ -26,7 +26,7 @@ class AddPlaceViewController: UIViewController,
   
   
   // MARk: - IBOutlet
-
+  
   
   @IBOutlet weak var nameTextField: UITextField!
   @IBOutlet weak var addressTextField: UITextField!
@@ -46,7 +46,7 @@ class AddPlaceViewController: UIViewController,
     hideKeyboardWhenTappedAround()
     imagesCollectionView.delegate = self
     imagesCollectionView.dataSource = self
-     
+    
     
   }
   
@@ -69,19 +69,19 @@ class AddPlaceViewController: UIViewController,
   func collectionView(_ collectionView: UICollectionView,
                       numberOfItemsInSection section: Int) -> Int {
     return imagesForPlace.count
-
+    
   }
   
   
   func collectionView(_ collectionView: UICollectionView,
                       cellForItemAt indexPath: IndexPath)
   -> UICollectionViewCell {
-   
+    
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell",
-                                    for: indexPath) as! ImagesCollectionViewCell
+                                                  for: indexPath) as! ImagesCollectionViewCell
     cell.imagePlace.image = imagesForPlace[indexPath.row]
     cell.deleteImage.tag = indexPath.row
-  
+    
     return cell
   }
   
@@ -114,14 +114,14 @@ class AddPlaceViewController: UIViewController,
   @IBAction func saveButtonTapped(_ sender: UIButton) {
     
     let db = Firestore.firestore()
-
+    
     var imageID  = ""
     if imageID == "" {
       imageID = UUID().uuidString
     }
     
     let documentID = UUID().uuidString
-
+    
     db.collection("Place").document(documentID).setData([
       "id":documentID,
       "name":nameTextField.text!,
@@ -154,17 +154,17 @@ class AddPlaceViewController: UIViewController,
     for data in imageData {
       imageID = UUID().uuidString
       
-    let storeageRF = storeage.reference().child(documentID).child(imageID)
-
+      let storeageRF = storeage.reference().child(documentID).child(imageID)
+      
       storeageRF.putData(data, metadata: uploadMetadata) { metadata, error in
         if error != nil {
-          print("~~ Error Upload Image: \(error?.localizedDescription)")
+          print("~~ Error Upload Image: \(String(describing: error?.localizedDescription))")
         } else {
           storeageRF.downloadURL { url, error in
             if error != nil {
-              print("~~ Error url Image: \(error?.localizedDescription)")
+              print("~~ Error url Image: \(String(describing: error?.localizedDescription))")
             } else {
-
+              
               images.append(url!.absoluteString)
               db.collection("Place").document(documentID).setData(["images":images], merge: true)
             }
@@ -172,12 +172,12 @@ class AddPlaceViewController: UIViewController,
         }
       }
     }
-
+    
     imageID = UUID().uuidString
-
-  let storeageRF = storeage.reference().child(documentID).child(imageID)
+    
+    let storeageRF = storeage.reference().child(documentID).child(imageID)
     let data = logoImageView.image!.jpegData(compressionQuality: 0.5)!
-
+    
     storeageRF.putData(data,
                        metadata: uploadMetadata) { metadata, error in
       if error != nil {
@@ -201,7 +201,7 @@ class AddPlaceViewController: UIViewController,
   func presentPhotoPicker() {
     var configuration = PHPickerConfiguration()
     if imageForLogo {
-    configuration.selectionLimit = 1
+      configuration.selectionLimit = 1
     } else {
       configuration.selectionLimit = 5
     }
@@ -212,6 +212,14 @@ class AddPlaceViewController: UIViewController,
             completion: nil)
   }
   
+  
+  
+}
+
+
+//Mark:- PHPicker
+
+extension AddPlaceViewController: PHPickerViewControllerDelegate{
   
   func picker(_ picker: PHPickerViewController,
               didFinishPicking results: [PHPickerResult]) {

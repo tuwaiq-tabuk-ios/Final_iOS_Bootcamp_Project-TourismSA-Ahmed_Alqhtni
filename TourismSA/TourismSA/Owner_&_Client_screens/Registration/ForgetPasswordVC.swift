@@ -12,14 +12,19 @@ import FirebaseAuth
 class ForgetPasswordVC:
   UIViewController {
   
+  // MARK: - IBOutlet -
   
   @IBOutlet weak var email: UITextField!
+  
+  // - View Controller lifeCycle 
   
   override func viewDidLoad() {
     super.viewDidLoad()
     hideKeyboardWhenTappedAround()
   }
   
+  
+  // MARk: - IBAction
   
   @IBAction func forgetPassword(_ sender: Any) {
     let auth = Auth.auth()

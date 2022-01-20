@@ -9,6 +9,8 @@ import UIKit
 
 class TourismTableViewCell: UITableViewCell {
   
+  // MARK: - IBOutlet -
+  
   @IBOutlet weak var tourismImage: UIImageView!
   @IBOutlet weak var tourismName: UILabel!
   @IBOutlet weak var tourismAddress: UILabel!
@@ -18,6 +20,8 @@ class TourismTableViewCell: UITableViewCell {
     
   }
   
+  
+  // - View Controller lifeCycle
   
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)

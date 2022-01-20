@@ -39,6 +39,8 @@ class signUpVC: UIViewController {
   }
   
   
+  // MARk: - IBAction
+  
   @IBAction func signInButton(_ sender: UIButton) {
     if emailTextField.text?.isEmpty == true {
       
@@ -68,6 +70,8 @@ class signUpVC: UIViewController {
     signInButton()
   }
   
+  
+  // MARk: - Function
   
   func signInButton() {
     
