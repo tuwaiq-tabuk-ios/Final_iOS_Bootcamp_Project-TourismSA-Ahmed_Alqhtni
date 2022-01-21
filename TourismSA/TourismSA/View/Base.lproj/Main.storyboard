@@ -14,7 +14,7 @@
         <!--UserTourism_View_Controller-->
         <scene sceneID="iN5-Ua-Lu0">
             <objects>
-                <viewController id="L42-me-BCe" userLabel="UserTourism_View_Controller" customClass="UsrTourismVC" customModule="TourismSA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="L42-me-BCe" userLabel="UserTourism_View_Controller" customClass="WelcomVC" customModule="TourismSA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lPQ-PX-LDO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="tintColor" name="profile"/>
                                                 <state key="normal" title="Edit Profile">
-                                                    <color key="titleColor" name="Color-2"/>
+                                                    <color key="titleColor" name="text"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -62,11 +62,11 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uZ-1u-2BY">
                                                 <rect key="frame" x="0.0" y="37" width="155" height="28.5"/>
                                                 <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
-                                                <color key="tintColor" name="Color-2"/>
+                                                <color key="tintColor" name="text"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="About the App">
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
-                                                    <color key="baseForegroundColor" name="Color-2"/>
+                                                    <color key="baseForegroundColor" name="text"/>
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -83,7 +83,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" title="LogOut">
-                                                    <color key="titleColor" name="Color-2"/>
+                                                    <color key="titleColor" name="text"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -473,9 +473,9 @@ So that the application helps the tourist to identify the displayed areas, get a
                                                         </cells>
                                                     </collectionView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2b0-5k-Qh1" userLabel="Butt">
-                                                        <rect key="frame" x="342.5" y="446" width="49.5" height="31"/>
+                                                        <rect key="frame" x="303.5" y="446" width="88.5" height="31"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="speaker.wave.2.circle.fill" catalog="system" title=".">
+                                                        <buttonConfiguration key="configuration" style="plain" image="speaker.wave.2" catalog="system" title="sound">
                                                             <color key="baseForegroundColor" name="profile"/>
                                                         </buttonConfiguration>
                                                         <connections>
@@ -644,13 +644,13 @@ So that the application helps the tourist to identify the displayed areas, get a
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="info" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qdS-b9-Jk7">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="info" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qdS-b9-Jk7">
                                                 <rect key="frame" x="0.0" y="484.5" width="414" height="350"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="350" id="DAf-Gn-VeN"/>
                                                 </constraints>
                                                 <color key="textColor" name="profile"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tr7-Z9-niU">
@@ -788,7 +788,9 @@ So that the application helps the tourist to identify the displayed areas, get a
                             <constraint firstAttribute="bottom" secondItem="cmB-n0-dxf" secondAttribute="bottom" id="gcS-KM-eoR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Add New" image="pencil" catalog="system" id="ixu-6s-8HS"/>
+                    <tabBarItem key="tabBarItem" title="Add New" image="pencil" catalog="system" id="ixu-6s-8HS">
+                        <color key="badgeColor" systemColor="secondaryLabelColor"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="addressTextField" destination="zDm-oq-BIH" id="bl9-UY-bMw"/>
                         <outlet property="imagesCollectionView" destination="ob0-tL-6ik" id="tVS-Wm-MmA"/>
@@ -1257,7 +1259,7 @@ So that the application helps the tourist to identify the displayed areas, get a
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KHL-bw-IhU">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
                     </tabBar>
                     <connections>
                         <segue destination="TZ4-31-hgv" kind="relationship" relationship="viewControllers" id="7Hw-jl-Lkb"/>
@@ -1293,10 +1295,11 @@ So that the application helps the tourist to identify the displayed areas, get a
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkV-8Z-SU7">
-                                <rect key="frame" x="383" y="108" width="27" height="31"/>
+                                <rect key="frame" x="380" y="108" width="30" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="tintColor" name="dark"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="rectangle.portrait.and.arrow.right" catalog="system"/>
+                                <state key="normal" image="rectangle.portrait.and.arrow.right" catalog="system"/>
                                 <connections>
                                     <action selector="signOut:" destination="TZ4-31-hgv" eventType="touchUpInside" id="qPC-Di-zhR"/>
                                 </connections>
@@ -1306,7 +1309,7 @@ So that the application helps the tourist to identify the displayed areas, get a
                         <color key="backgroundColor" name="Color-1"/>
                         <constraints>
                             <constraint firstItem="9K0-J7-QKn" firstAttribute="top" secondItem="P0O-JZ-y9R" secondAttribute="top" constant="140" id="9jP-Yt-4f5"/>
-                            <constraint firstItem="tkV-8Z-SU7" firstAttribute="leading" secondItem="YfE-v9-L9g" secondAttribute="trailing" constant="4" id="Ctc-DM-gVd"/>
+                            <constraint firstItem="tkV-8Z-SU7" firstAttribute="leading" secondItem="YfE-v9-L9g" secondAttribute="trailing" constant="1" id="Ctc-DM-gVd"/>
                             <constraint firstItem="206-MJ-G2D" firstAttribute="leading" secondItem="eUo-P4-b37" secondAttribute="leading" id="Czd-lk-jq6"/>
                             <constraint firstItem="YfE-v9-L9g" firstAttribute="leading" secondItem="eUo-P4-b37" secondAttribute="leading" constant="4" id="DKb-ZB-h88"/>
                             <constraint firstItem="tkV-8Z-SU7" firstAttribute="top" secondItem="P0O-JZ-y9R" secondAttribute="top" constant="20" id="GPx-cb-Xnp"/>
@@ -1323,7 +1326,9 @@ So that the application helps the tourist to identify the displayed areas, get a
                             <constraint firstItem="P0O-JZ-y9R" firstAttribute="trailing" secondItem="YfE-v9-L9g" secondAttribute="trailing" constant="35" id="yVN-rd-pgK"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="aRB-Au-N2m"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="aRB-Au-N2m">
+                        <color key="badgeColor" systemColor="separatorColor"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" title="TourismSA" id="S1i-Dm-Yn2"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -1342,7 +1347,7 @@ So that the application helps the tourist to identify the displayed areas, get a
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image=" " translatesAutoresizingMaskIntoConstraints="NO" id="k4W-L9-aV7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="k4W-L9-aV7">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wlm-t9-XW0">
@@ -1398,13 +1403,13 @@ So that the application helps the tourist to identify the displayed areas, get a
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="info" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7J-W1-odX">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="info" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o7J-W1-odX">
                                                 <rect key="frame" x="0.0" y="484.5" width="414" height="350"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="350" id="OoE-TS-TEs"/>
                                                 </constraints>
                                                 <color key="textColor" name="profile"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.rectangle.on.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oe3-4z-rY3">
@@ -1768,7 +1773,6 @@ So that the application helps the tourist to identify the displayed areas, get a
         </scene>
     </scenes>
     <resources>
-        <image name=" " width="128" height="128"/>
         <image name="IMG_1287" width="1080" height="1080"/>
         <image name="Image" width="1080" height="1080"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
@@ -1776,7 +1780,7 @@ So that the application helps the tourist to identify the displayed areas, get a
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="plus.rectangle.on.rectangle" catalog="system" width="128" height="97"/>
         <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
-        <image name="speaker.wave.2.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="speaker.wave.2" catalog="system" width="128" height="90"/>
         <image name="star.circle" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1805,6 +1809,9 @@ So that the application helps the tourist to identify the displayed areas, get a
         <systemColor name="placeholderTextColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -1816,6 +1823,9 @@ So that the application helps the tourist to identify the displayed areas, get a
         </systemColor>
         <systemColor name="systemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

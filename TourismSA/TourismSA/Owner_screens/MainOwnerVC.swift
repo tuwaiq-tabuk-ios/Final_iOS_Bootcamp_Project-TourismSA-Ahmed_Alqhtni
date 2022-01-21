@@ -51,7 +51,7 @@ class MainOwnerVC: UIViewController {
     do {
       try auth.signOut()
       self.dismiss(animated: true, completion:nil)
-      
+
     } catch let signOutError {
       let alert = UIAlertController(title: "Error", message: signOutError.localizedDescription, preferredStyle: UIAlertController.Style.alert)
       self.present(alert, animated: true, completion: nil)
@@ -60,12 +60,14 @@ class MainOwnerVC: UIViewController {
   }
   
   
+  // MARK: - Function
+  
   func getData() {
     
     collectionRF.getDocuments { snapshot, error in
       
       if error != nil {
-        print("~~ error get data: \(error?.localizedDescription)")
+        print("~~ error get data: \(String(describing: error?.localizedDescription))")
       
       } else {
         
@@ -98,8 +100,9 @@ class MainOwnerVC: UIViewController {
 }
 
 
-extension MainOwnerVC : UITableViewDataSource{
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension MainOwnerVC : UITableViewDataSource {
+  func tableView(_ tableView: UITableView,
+                 numberOfRowsInSection section: Int) -> Int {
     return place.count
     
   }

@@ -1,0 +1,255 @@
+
+/* Class = "UILabel"; text = "tttt"; ObjectID = "0x5-Ou-CSz"; */
+"0x5-Ou-CSz.text" = "tttt";
+
+/* Class = "UIButton"; configuration.title = "About the App"; ObjectID = "1uZ-1u-2BY"; */
+"1uZ-1u-2BY.configuration.title" = "حول التطبيق";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1uZ-1u-2BY"; */
+"1uZ-1u-2BY.normalTitle" = "عن التطبيق";
+// ترجمه زر حول التطبيق
+
+/* Class = "UILabel"; text = "Tourism Address"; ObjectID = "1ue-k4-REq"; */
+"1ue-k4-REq.text" = "عنوان السياحة";
+
+/* Class = "UIButton"; configuration.title = "sound"; ObjectID = "2b0-5k-Qh1"; */
+"2b0-5k-Qh1.configuration.title" = "صوت";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2b0-5k-Qh1"; */
+"2b0-5k-Qh1.normalTitle" = "صوت";
+// ترجمه زر القارئ حق النصوص
+
+/* Class = "UILabel"; text = "Error"; ObjectID = "40o-li-trd"; */
+"40o-li-trd.text" = "Error";
+
+/* Class = "UIButton"; configuration.title = "save"; ObjectID = "4hB-ad-1Y0"; */
+"4hB-ad-1Y0.configuration.title" = "حفظ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "4hB-ad-1Y0"; */
+"4hB-ad-1Y0.normalTitle" = "حفظ";
+// زر الحفظ في صفحه اضافت مكان جديد
+
+/* Class = "UILabel"; text = "Complete the required to add"; ObjectID = "4u2-rv-BfK"; */
+"4u2-rv-BfK.text" = "أكمل المطلوب للإضافة";
+
+/* Class = "UINavigationItem"; title = "Welcom"; ObjectID = "50J-WA-WBU"; */
+"50J-WA-WBU.title" = "أهلا وسهلا بكم";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "5M1-L8-mku"; */
+"5M1-L8-mku.text" = "الاسم";
+
+/* Class = "UIButton"; configuration.title = "Add Images"; ObjectID = "7tg-AD-dNv"; */
+"7tg-AD-dNv.configuration.title" = "إضافة الصور";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7tg-AD-dNv"; */
+"7tg-AD-dNv.normalTitle" = "اضافه صور";
+//اضافه صور في صفحه تعديل الاماكن
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "7vo-Kz-qoQ"; */
+"7vo-Kz-qoQ.placeholder" = "اسم العائلة";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "9fG-Xf-j3B"; */
+"9fG-Xf-j3B.title" = "رجوع";
+
+/* Class = "UIButton"; configuration.title = "Send"; ObjectID = "DtP-xk-z3d"; */
+"DtP-xk-z3d.configuration.title" = "ارسال";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "DtP-xk-z3d"; */
+"DtP-xk-z3d.normalTitle" = "ارسال";
+// ترجمه الارسال لتحقق من الايميل
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "EIf-fg-jcf"; */
+"EIf-fg-jcf.placeholder" = "كلمة المرور";
+
+/* Class = "UITextField"; placeholder = "First Name"; ObjectID = "Fh1-fc-TU6"; */
+"Fh1-fc-TU6.placeholder" = "الاسم الاول";
+
+/* Class = "UILabel"; text = "500"; ObjectID = "HuT-rv-398"; */
+"HuT-rv-398.text" = "500";
+
+/* Class = "UILabel"; text = "Tourism Name"; ObjectID = "IR3-jD-uOj"; */
+"IR3-jD-uOj.text" = "اسم السياحة";
+
+/* Class = "UITextField"; placeholder = "Your Email"; ObjectID = "KyK-UV-nxV"; */
+"KyK-UV-nxV.placeholder" = "الايميل";
+
+/* Class = "UIButton"; configuration.title = "SignUp Owner"; ObjectID = "Le6-nh-b0N"; */
+"Le6-nh-b0N.configuration.title" = "تسجيل كمالك";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Le6-nh-b0N"; */
+"Le6-nh-b0N.normalTitle" = "تسجيل كمالك";
+// تسجيل كمالك
+/* Class = "UILabel"; text = "The idea of the application is to display the tourist places in Saudi Arabia in conjunction with the vision and the Kingdom’s orientation around tourism, and to focus on the distinctive areas such as Madin Saleh and Madin Shuaib and other places that bear distinct history and stories that many people do not know. \n\nSo that the application helps the tourist to identify the displayed areas, get an idea of the site, and raise the rate of visits to archaeological sites and other unknown areas in the Kingdom."; ObjectID = "MRY-fR-qsu"; */
+"MRY-fR-qsu.text" = "تتمثل فكرة التطبيق في عرض الأماكن السياحية في المملكة العربية السعودية بالتزامن مع رؤية المملكة وتوجهها نحو السياحة ، والتركيز على المناطق المميزة مثل مدينة صالح ومدين شعيب وغيرها من الأماكن التي تحمل تاريخًا مميزًا وقصصًا كثير من الناس لا يعرفون. \ n \ n بحيث يساعد التطبيق السائح في التعرف على المناطق المعروضة ، والحصول على فكرة عن الموقع ، ورفع معدل الزيارات للمواقع الأثرية وغيرها من المناطق غير المعروفة في المملكة.";
+
+/* Class = "UITextField"; placeholder = "confirm password"; ObjectID = "Nw2-Ka-zdM"; */
+"Nw2-Ka-zdM.placeholder" = "تأكيد كلمة المرور";
+
+/* Class = "UILabel"; text = "By signing in info TourismSA you agree to our User Agreement"; ObjectID = "O9k-7P-Qui"; */
+"O9k-7P-Qui.text" = "بتسجيل الدخول إلى info TourismSA أنت توافق على اتفاقية المستخدم الخاصة بنا";
+
+/* Class = "UITextField"; placeholder = "latitude"; ObjectID = "Pjk-kv-c0a"; */
+"Pjk-kv-c0a.placeholder" = "خط العرض";
+
+/* Class = "UITextField"; placeholder = "confirm password"; ObjectID = "Qet-1t-DEx"; */
+"Qet-1t-DEx.placeholder" = "تأكيد كلمة المرور";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "R0u-lE-Zht"; */
+"R0u-lE-Zht.placeholder" = "العنوان";
+
+/* Class = "UIButton"; normalTitle = "Sign In"; ObjectID = "RzZ-RU-JoE"; */
+"RzZ-RU-JoE.normalTitle" = "تسجيل دخول";
+
+/* Class = "UINavigationItem"; title = "TourismSA"; ObjectID = "S1i-Dm-Yn2"; */
+"S1i-Dm-Yn2.title" = "TourismSA";
+
+/* Class = "UIButton"; configuration.title = "save"; ObjectID = "S6x-KM-vIQ"; */
+"S6x-KM-vIQ.configuration.title" = "ارسال";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "S6x-KM-vIQ"; */
+"S6x-KM-vIQ.normalTitle" = "ارسال";
+// زر الحفظ في صفحه التعديل الاماكن
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "TyK-vN-ZLI"; */
+"TyK-vN-ZLI.text" = "الايميل";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "Uhy-ps-zGT"; */
+"Uhy-ps-zGT.normalTitle" = "تسجيل جديد";
+
+/* Class = "UITabBarItem"; title = "Add New"; ObjectID = "WFl-L4-XaK"; */
+"WFl-L4-XaK.title" = "اضافه جديد";
+
+/* Class = "UINavigationItem"; title = "Info"; ObjectID = "XDp-0F-Aye"; */
+"XDp-0F-Aye.title" = "حول";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "XWP-zd-iIh"; */
+"XWP-zd-iIh.placeholder" = "الايميل";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "XWn-cQ-bcS"; */
+"XWn-cQ-bcS.normalTitle" = "تسجيل جديد";
+
+/* Class = "UILabel"; text = "Complete the required to add"; ObjectID = "ZGx-wM-1GR"; */
+"ZGx-wM-1GR.text" = "أكمل المطلوب للإضافة";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "aRB-Au-N2m"; */
+"aRB-Au-N2m.title" = "الرئيسيه";
+
+/* Class = "UITextField"; placeholder = "longitude"; ObjectID = "apd-tc-l0y"; */
+"apd-tc-l0y.placeholder" = "خط الطول";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "bpn-fM-u6d"; */
+"bpn-fM-u6d.placeholder" = "كلمة المرور";
+
+/* Class = "UITextField"; placeholder = "latitude"; ObjectID = "cDu-MR-KsS"; */
+"cDu-MR-KsS.placeholder" = "خط العرض";
+
+/* Class = "UIButton"; configuration.title = "Forgot your password ?"; ObjectID = "e1B-SS-cn8"; */
+"e1B-SS-cn8.configuration.title" = "نسيت كلمة المرور ؟";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "e1B-SS-cn8"; */
+"e1B-SS-cn8.normalTitle" = "نسيت كلمة المرور ؟";
+// نسيت كلمه المرور
+/* Class = "UITextField"; placeholder = "Name place"; ObjectID = "eYF-n2-2dm"; */
+"eYF-n2-2dm.placeholder" = "اسم المكان";
+
+/* Class = "UITextField"; placeholder = "Name place"; ObjectID = "eky-jW-wf3"; */
+"eky-jW-wf3.placeholder" = "اسم المكان";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "fPb-TI-d0t"; */
+"fPb-TI-d0t.placeholder" = "الايميل";
+
+/* Class = "UITextField"; placeholder = "First Name"; ObjectID = "fxQ-W4-gIz"; */
+"fxQ-W4-gIz.placeholder" = "الاسم الاول";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "fzo-OU-Zew"; */
+"fzo-OU-Zew.text" = "حول";
+
+/* Class = "UILabel"; text = "By signing in info ToursimSA you agree to our User Agreement"; ObjectID = "gZH-1g-4E8"; */
+"gZH-1g-4E8.text" = "من خلال تسجيل الدخول إلى معلومات تورسيمسا ، فإنك توافق على اتفاقية المستخدم الخاصة بنا";
+
+/* Class = "UIButton"; configuration.title = "Add Logo"; ObjectID = "hIm-n6-2b5"; */
+"hIm-n6-2b5.configuration.title" = "اضافه شعار";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "hIm-n6-2b5"; */
+"hIm-n6-2b5.normalTitle" = "اضافه شعار";
+// زر اضافه الشعار في صفحه اضافه الاماكن
+
+/* Class = "UIButton"; normalTitle = "Edit Profile"; ObjectID = "hvm-vs-5sk"; */
+"hvm-vs-5sk.normalTitle" = "تعديل الملف";
+
+/* Class = "UIButton"; configuration.title = "Add Logo"; ObjectID = "iF0-AD-1Dm"; */
+"iF0-AD-1Dm.configuration.title" = "اضافه شعار";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "iF0-AD-1Dm"; */
+"iF0-AD-1Dm.normalTitle" = "اضافه شعار";
+// زر اضافه الشعار في صفحه التعديل
+
+/* Class = "UITabBarItem"; title = "Add New"; ObjectID = "ixu-6s-8HS"; */
+"ixu-6s-8HS.title" = "اضافه جديد";
+
+/* Class = "UITextField"; placeholder = "longitude"; ObjectID = "kBi-DV-koo"; */
+"kBi-DV-koo.placeholder" = "خط العرض";
+
+/* Class = "UINavigationItem"; title = "Profile"; ObjectID = "kb8-sg-0c8"; */
+"kb8-sg-0c8.title" = "الملف الشخصي";
+
+/* Class = "UITextField"; placeholder = "info"; ObjectID = "o7J-W1-odX"; */
+"o7J-W1-odX.placeholder" = "حول";
+
+/* Class = "UITextField"; placeholder = "Last Name"; ObjectID = "oJ5-SM-B6X"; */
+"oJ5-SM-B6X.placeholder" = "الاسم الاخير";
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "odt-ZQ-HXd"; */
+"odt-ZQ-HXd.text" = "الاسم الاخير";
+
+/* Class = "UIButton"; configuration.title = "Add Images"; ObjectID = "oe0-lm-NRz"; */
+"oe0-lm-NRz.configuration.title" = "اضافه صوره";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "oe0-lm-NRz"; */
+"oe0-lm-NRz.normalTitle" = "اضافه صور";
+//زر اضافه الصور
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "pSi-i1-pTo"; */
+"pSi-i1-pTo.title" = "Item";
+
+/* Class = "UITextField"; placeholder = "info"; ObjectID = "qdS-b9-Jk7"; */
+"qdS-b9-Jk7.placeholder" = "حول";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "rlp-jS-uON"; */
+"rlp-jS-uON.placeholder" = "الايميل";
+
+/* Class = "UIButton"; normalTitle = "Sign Up"; ObjectID = "ssI-Hd-y15"; */
+"ssI-Hd-y15.normalTitle" = "تسجيل جديد";
+
+/* Class = "UITextField"; placeholder = "likes"; ObjectID = "tIz-vg-s6j"; */
+"tIz-vg-s6j.placeholder" = "تفضيل";
+
+/* Class = "UITextField"; placeholder = "likes"; ObjectID = "tTJ-sb-vnT"; */
+"tTJ-sb-vnT.placeholder" = "تفضيل";
+
+/* Class = "UIButton"; configuration.title = "Save"; ObjectID = "uFd-hF-ANN"; */
+"uFd-hF-ANN.configuration.title" = "حفظ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uFd-hF-ANN"; */
+"uFd-hF-ANN.normalTitle" = "حفظ";
+
+/* Class = "UILabel"; text = "Error"; ObjectID = "uTI-Zf-Xy4"; */
+"uTI-Zf-Xy4.text" = "Error";
+
+/* Class = "UILabel"; text = "Error"; ObjectID = "wu2-cy-Eu5"; */
+"wu2-cy-Eu5.text" = "Error";
+
+/* Class = "UILabel"; text = "By signing in info ToursimSA you agree to our User Agreement"; ObjectID = "y52-mC-xjp"; */
+"y52-mC-xjp.text" = "من خلال تسجيل الدخول إلى معلومات تورسيمسا ، فإنك توافق على اتفاقية المستخدم الخاصة بنا";
+
+/* Class = "UIButton"; normalTitle = "LogOut"; ObjectID = "yap-8U-wxf"; */
+"yap-8U-wxf.normalTitle" = "تسجيل خروج";
+
+/* Class = "UILabel"; text = "Location"; ObjectID = "yqa-HW-Dx5"; */
+"yqa-HW-Dx5.text" = "الموقع";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "zDm-oq-BIH"; */
+"zDm-oq-BIH.placeholder" = "العنوان";
+
+/* Class = "UITextField"; placeholder = "password"; ObjectID = "zVd-1I-mrn"; */
+"zVd-1I-mrn.placeholder" = "كلمة المرور";

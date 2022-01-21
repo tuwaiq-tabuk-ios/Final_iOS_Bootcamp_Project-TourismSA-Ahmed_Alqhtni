@@ -13,21 +13,26 @@ import FirebaseAuth
 class SignInVC: UIViewController {
   
   
+  // MARK: - IBOutlet -
+  
   @IBOutlet weak var errorIb: UILabel!
   @IBOutlet weak var emailTextField: UITextField!
   @IBOutlet weak var passwordTextField: UITextField!
-  @IBOutlet weak var forgetPassword: UIButton!
+ 
   
+  // - View Controller lifeCycle 
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    errorIb.alpha = 0
+    errorIb.isHidden = true
     emailTextField.layer.cornerRadius = 18
     passwordTextField.layer.cornerRadius = 18
     hideKeyboardWhenTappedAround()
  
   }
 
+  
+  // MARk: - IBAction
   
   @IBAction func signInButton(_ sender: UIButton) {
     
@@ -40,7 +45,7 @@ class SignInVC: UIViewController {
       
       (authResult,error) in
       if error != nil {
-        self.errorIb.alpha = 1
+        self.errorIb.isHidden = false
         self.errorIb.text = error?.localizedDescription
         
       } else {

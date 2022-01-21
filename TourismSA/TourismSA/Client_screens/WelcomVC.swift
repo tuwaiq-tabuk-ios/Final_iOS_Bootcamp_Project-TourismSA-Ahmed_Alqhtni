@@ -10,7 +10,7 @@ import FirebaseAuth
 import Firebase
 import SDWebImage
 
-class UsrTourismVC: UIViewController {
+class WelcomVC: UIViewController {
   
   
   //MARK: - property
@@ -135,7 +135,7 @@ class UsrTourismVC: UIViewController {
 }
 
 
-extension UsrTourismVC : UITableViewDataSource{
+extension WelcomVC : UITableViewDataSource{
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return place.count
     
@@ -166,7 +166,7 @@ extension UsrTourismVC : UITableViewDataSource{
 }
 
 
-extension UsrTourismVC: UITableViewDelegate{
+extension WelcomVC: UITableViewDelegate{
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
     let storyboard = UIStoryboard(name: "Main", bundle: nil)

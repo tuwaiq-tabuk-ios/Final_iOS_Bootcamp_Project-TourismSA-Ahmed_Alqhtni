@@ -7,9 +7,11 @@
 
 import Foundation
 
+
 struct RootPlace {
   let places: [PlaceData]
 }
+
 
 struct PlaceData {
   let id: String
