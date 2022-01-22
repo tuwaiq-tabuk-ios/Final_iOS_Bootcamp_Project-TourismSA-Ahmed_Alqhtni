@@ -12,10 +12,11 @@ import AVFoundation
 
 class DetailTourismVC: UIViewController,
                        UICollectionViewDelegate,
-                       UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+                       UICollectionViewDataSource,
+                       UICollectionViewDelegateFlowLayout {
   
   
-  // MARk: - property
+  // MARK: - propertys
   
   var arrImage = [String]()
   var timer :Timer?
@@ -43,7 +44,7 @@ class DetailTourismVC: UIViewController,
  
   
   
-  // MARk: - lifeCycle
+  // MARK: - lifeCycle
   
   override func viewDidDisappear(_ animated: Bool) {
     super.viewDidDisappear(animated)
@@ -53,15 +54,15 @@ class DetailTourismVC: UIViewController,
   }
   
   
-  // MARk: - IBAction
+  // MARK: - IBActions
   
   @IBAction func talk(_ sender: Any) {
     
-    talks(place!.description)
+    talkWith(place!.description)
     
   }
   
-  // MARk: - LifeCycle
+  // MARK: - LifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -109,10 +110,10 @@ class DetailTourismVC: UIViewController,
   }
   
   
-  // MARk: - function
+  // MARK: - functions
   
-  func talks(_ string:String) {
-    let utterance = AVSpeechUtterance(string:string)
+  func talkWith(_ text:String) {
+    let utterance = AVSpeechUtterance(string:text)
     utterance.voice = AVSpeechSynthesisVoice(language: "en-ZA")
     
     if synthesizer.isSpeaking {
@@ -145,6 +146,7 @@ class DetailTourismVC: UIViewController,
     
   }
   
+ 
   
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
@@ -183,8 +185,15 @@ class DetailTourismVC: UIViewController,
       animated: true
     )
     collectionView.isPagingEnabled = true
-    
-    //    collectionView.reloadData()
+
   }
   
 }
+
+
+// MARK: - Collection FlowLayout
+
+
+
+
+  

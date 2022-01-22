@@ -20,10 +20,12 @@ class SignInVC: UIViewController {
   @IBOutlet weak var passwordTextField: UITextField!
  
   
+  
   // - View Controller lifeCycle 
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     errorIb.isHidden = true
     emailTextField.layer.cornerRadius = 18
     passwordTextField.layer.cornerRadius = 18
@@ -31,6 +33,7 @@ class SignInVC: UIViewController {
  
   }
 
+  
   
   // MARk: - IBAction
   
@@ -41,9 +44,9 @@ class SignInVC: UIViewController {
     let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
     
     
-    Auth.auth().signIn(withEmail: email, password: password) {
-      
-      (authResult,error) in
+    Auth.auth().signIn(withEmail: email,
+                       password: password) {
+(authResult,error) in
       if error != nil {
         self.errorIb.isHidden = false
         self.errorIb.text = error?.localizedDescription
@@ -56,18 +59,20 @@ class SignInVC: UIViewController {
         documentRF.getDocument { snapchot, error in
           if error != nil {
             print("~~ error get user data: \(String(describing: error?.localizedDescription))")
+            
           } else {
             
             let data = snapchot!.data()!
             let type = data["type"] as! String
             let storyBord = UIStoryboard(name: "Main", bundle: nil)
             if type == "owner"{
-              let vc = storyBord.instantiateViewController(withIdentifier: "ownerID")
+              let vc = storyBord.instantiateViewController(withIdentifier: Constants.K.OwnerStoryboard)
               vc.modalPresentationStyle = .overFullScreen
               self.present(vc, animated: true)
               
             } else {
-              let vc = storyBord.instantiateViewController(withIdentifier: "MainVC")
+              
+              let vc = storyBord.instantiateViewController(withIdentifier:Constants.K.mainStoryboard)
               vc.modalPresentationStyle = .overFullScreen
               self.present(vc, animated: true)
             }

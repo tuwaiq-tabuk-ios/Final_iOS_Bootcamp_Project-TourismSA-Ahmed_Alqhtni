@@ -34,12 +34,14 @@ class signUpVC: UIViewController {
     lastNameTextField.layer.cornerRadius = 15
     emailTextField.layer.cornerRadius = 15
     passwordTextField.layer.cornerRadius = 15
+    PasswordVerification.layer.cornerRadius = 15
     hideKeyboardWhenTappedAround()
     
   }
   
   
-  // MARk: - IBAction
+  
+  // MARK: - IBActions
   
   @IBAction func signInButton(_ sender: UIButton) {
     if emailTextField.text?.isEmpty == true {
@@ -54,11 +56,13 @@ class signUpVC: UIViewController {
       errorIb.text = "Enter the password"
       return
     }
+    
     if firstNameTextField.text?.isEmpty == true {
       errorIb.isHidden = false
       errorIb.text = "Fill in the first name"
       return
     }
+    
     if lastNameTextField.text?.isEmpty == true {
       errorIb.isHidden = false
       errorIb.text = "Fill in the Last name"
@@ -71,7 +75,7 @@ class signUpVC: UIViewController {
   }
   
   
-  // MARk: - Function
+  // MARK: - Functions
   
   func signInButton() {
     
@@ -101,7 +105,7 @@ class signUpVC: UIViewController {
           ])
           
           let storyBord = UIStoryboard(name: "Main", bundle: nil)
-          let vc = storyBord.instantiateViewController(withIdentifier: "MainVC")
+          let vc = storyBord.instantiateViewController(withIdentifier: Constants.K.mainStoryboard )
           vc.modalPresentationStyle = .overFullScreen
           self.present(vc, animated: true)
           

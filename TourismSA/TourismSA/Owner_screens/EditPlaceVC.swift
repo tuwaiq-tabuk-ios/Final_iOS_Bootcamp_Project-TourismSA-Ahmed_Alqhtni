@@ -61,7 +61,7 @@ class EditPlaceVC: UIViewController,
     configureScreen()
   }
   
-  //MARK: - Action
+  //MARK: - Actions
   
   @IBAction func addLogoButtonTapped(_ sender: UIButton) {
     imageForLogo = true
@@ -204,7 +204,7 @@ class EditPlaceVC: UIViewController,
         with: URL(string: imageFromPlaceData)) { sdImage,
           error, _,_ in
           if error != nil {
-            
+          
           } else {
             
             print(" + + + + + sdImage: \(String(describing: sdImage))")
@@ -270,7 +270,9 @@ extension EditPlaceVC: UICollectionViewDataSource {
 }
 
 
+
 // MARK: - PHPickerViewControllerDelegate
+
 
 extension EditPlaceVC: PHPickerViewControllerDelegate {
   

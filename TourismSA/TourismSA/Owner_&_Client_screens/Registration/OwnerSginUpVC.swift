@@ -22,7 +22,7 @@ class OwnerSginUpVC: UIViewController {
   @IBOutlet weak var passwordTextField: UITextField!
   @IBOutlet weak var PasswordVerification: UITextField!
   
-  // - View Controller lifeCycle
+  //MARK: - View Controller lifeCycle
   
   
   override func viewDidLoad() {
@@ -39,7 +39,7 @@ class OwnerSginUpVC: UIViewController {
   }
   
   
-  // MARk: - IBAction
+  // MARK: - IBActions
   
   @IBAction func signUpButton(_ sender: UIButton) {
     if emailTextField.text?.isEmpty == true {
@@ -54,11 +54,13 @@ class OwnerSginUpVC: UIViewController {
       errorIb.text = "Enter the password"
       return
     }
+    
     if firstNameTextField.text?.isEmpty == true {
       errorIb.isHidden = false
       errorIb.text = "Fill in the first name"
       return
     }
+    
     if lastNameTextField.text?.isEmpty == true {
       errorIb.isHidden = false
       errorIb.text = "Fill in the Last name"
@@ -71,7 +73,7 @@ class OwnerSginUpVC: UIViewController {
   }
   
   
-  // MARk: - Function
+  // MARK: - Functions
   
   func signUpButton() {
     
@@ -101,13 +103,15 @@ class OwnerSginUpVC: UIViewController {
           ])
           
           let storyBord = UIStoryboard(name: "Main", bundle: nil)
-          let vc = storyBord.instantiateViewController(withIdentifier: "ownerID")
+          let vc = storyBord.instantiateViewController(withIdentifier: Constants.K.OwnerStoryboard)
           vc.modalPresentationStyle = .overFullScreen
           self.present(vc, animated: true)
           
         }
       }
+    
     } else {
+      
       errorIb.isEnabled = false
       errorIb.text = "Password Do not Match"
     }
