@@ -11,6 +11,10 @@ So that the application helps the tourist to identify the displayed areas, get a
 People interested in tourism and exploring distinctive areas and monuments in the Kingdom of Saudi Arabia.
 
 
+## Video
+
+https://user-images.githubusercontent.com/91871668/150645730-7136e3b3-5f57-4591-8fc9-4added007044.mov
+
 
 
 
