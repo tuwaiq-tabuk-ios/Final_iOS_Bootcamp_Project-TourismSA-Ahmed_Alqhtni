@@ -22,10 +22,11 @@
 		202B86A22780C9560043859D /* ImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B86A12780C9560043859D /* ImagesCollectionViewCell.swift */; };
 		202B86A62780EF7B0043859D /* MainOwnerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B86A52780EF7B0043859D /* MainOwnerVC.swift */; };
 		202B86A82780F2DC0043859D /* EditPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202B86A72780F2DC0043859D /* EditPlaceVC.swift */; };
+		203EB10E27A022EA008F7AA7 /* RootPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203EB10D27A022EA008F7AA7 /* RootPlace.swift */; };
 		20631DED2779A9FD0014F901 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20631DEC2779A9FD0014F901 /* CollectionViewCell.swift */; };
 		20631DF12779F6650014F901 /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20631DF02779F6650014F901 /* ForgetPasswordVC.swift */; };
 		207976C22770B9AC0081B14A /* signUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207976C12770B9AC0081B14A /* signUpVC.swift */; };
-		207D72E3276A02A5001033B6 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D72E2276A02A5001033B6 /* Place.swift */; };
+		207D72E3276A02A5001033B6 /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D72E2276A02A5001033B6 /* PlaceData.swift */; };
 		207D72E5276A0406001033B6 /* DetailTourismVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207D72E4276A0406001033B6 /* DetailTourismVC.swift */; };
 		20AC851C2771B04B00F790DB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 20AC851B2771B04B00F790DB /* GoogleService-Info.plist */; };
 		20D4350E277AEEB300BBD3FA /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D4350D277AEEB300BBD3FA /* UIViewController+Ext.swift */; };
@@ -51,10 +52,11 @@
 		202B86A12780C9560043859D /* ImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewCell.swift; sourceTree = "<group>"; };
 		202B86A52780EF7B0043859D /* MainOwnerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainOwnerVC.swift; sourceTree = "<group>"; };
 		202B86A72780F2DC0043859D /* EditPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlaceVC.swift; sourceTree = "<group>"; };
+		203EB10D27A022EA008F7AA7 /* RootPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootPlace.swift; sourceTree = "<group>"; };
 		20631DEC2779A9FD0014F901 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		20631DF02779F6650014F901 /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
 		207976C12770B9AC0081B14A /* signUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signUpVC.swift; sourceTree = "<group>"; };
-		207D72E2276A02A5001033B6 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		207D72E2276A02A5001033B6 /* PlaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
 		207D72E4276A0406001033B6 /* DetailTourismVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTourismVC.swift; sourceTree = "<group>"; };
 		20AC851B2771B04B00F790DB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		20D4350D277AEEB300BBD3FA /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				207D72E6276A0437001033B6 /* Model */,
+				203EB10C27A01E05008F7AA7 /* Common */,
 				2043D6552794191E00B24B49 /* Owner_&_Client_screens */,
 				2043D6542794184400B24B49 /* Client_screens */,
 				2043D6532794183600B24B49 /* Owner_screens */,
@@ -150,6 +153,14 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
+		203EB10C27A01E05008F7AA7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				20086F79279C544E00C586BF /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		2043D6532794183600B24B49 /* Owner_screens */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,8 +195,8 @@
 		207D72E6276A0437001033B6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				20086F79279C544E00C586BF /* Constants.swift */,
-				207D72E2276A02A5001033B6 /* Place.swift */,
+				207D72E2276A02A5001033B6 /* PlaceData.swift */,
+				203EB10D27A022EA008F7AA7 /* RootPlace.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -335,12 +346,13 @@
 				207D72E5276A0406001033B6 /* DetailTourismVC.swift in Sources */,
 				202347172769F5250078DF7A /* SceneDelegate.swift in Sources */,
 				20D4350E277AEEB300BBD3FA /* UIViewController+Ext.swift in Sources */,
-				207D72E3276A02A5001033B6 /* Place.swift in Sources */,
+				207D72E3276A02A5001033B6 /* PlaceData.swift in Sources */,
 				2023472B2769F6E70078DF7A /* TourismTableViewCell.swift in Sources */,
 				202B86A82780F2DC0043859D /* EditPlaceVC.swift in Sources */,
 				202B86A62780EF7B0043859D /* MainOwnerVC.swift in Sources */,
 				202B86A22780C9560043859D /* ImagesCollectionViewCell.swift in Sources */,
 				2023472E2769F9300078DF7A /* ProfileTourismVC.swift in Sources */,
+				203EB10E27A022EA008F7AA7 /* RootPlace.swift in Sources */,
 				20086F7A279C544E00C586BF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,7 +507,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5G285Z8X9T;
 				INFOPLIST_FILE = TourismSA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,7 +528,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5G285Z8X9T;
 				INFOPLIST_FILE = TourismSA/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

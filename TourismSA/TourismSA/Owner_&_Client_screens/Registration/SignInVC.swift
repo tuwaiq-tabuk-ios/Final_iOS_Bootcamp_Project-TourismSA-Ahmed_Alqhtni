@@ -66,13 +66,13 @@ class SignInVC: UIViewController {
             let type = data["type"] as! String
             let storyBord = UIStoryboard(name: "Main", bundle: nil)
             if type == "owner"{
-              let vc = storyBord.instantiateViewController(withIdentifier: Constants.K.OwnerStoryboard)
+              let vc = storyBord.instantiateViewController(withIdentifier: K.Storyboard.OwnerStoryboard)
               vc.modalPresentationStyle = .overFullScreen
               self.present(vc, animated: true)
               
             } else {
               
-              let vc = storyBord.instantiateViewController(withIdentifier:Constants.K.mainStoryboard)
+              let vc = storyBord.instantiateViewController(withIdentifier:K.Storyboard.mainStoryboard)
               vc.modalPresentationStyle = .overFullScreen
               self.present(vc, animated: true)
             }
