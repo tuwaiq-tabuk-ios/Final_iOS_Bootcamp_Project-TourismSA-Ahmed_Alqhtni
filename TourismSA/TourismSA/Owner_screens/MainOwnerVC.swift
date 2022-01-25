@@ -135,7 +135,7 @@ extension MainOwnerVC: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-    let detail = storyboard.instantiateViewController(withIdentifier: "editID") as! EditPlaceVC
+    let detail = storyboard.instantiateViewController(withIdentifier:Constants.K.editStoryboard) as! EditPlaceVC
     
     detail.placeData = place[indexPath.row]
     

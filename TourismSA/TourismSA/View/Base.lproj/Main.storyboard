@@ -1235,7 +1235,7 @@ So that the application helps the tourist to identify the displayed areas, get a
         <!--Navigation Controller-->
         <scene sceneID="JpT-iE-foe">
             <objects>
-                <navigationController storyboardIdentifier="ownerID" automaticallyAdjustsScrollViewInsets="NO" id="31d-Ec-AIK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="go_to_ownerID" automaticallyAdjustsScrollViewInsets="NO" id="31d-Ec-AIK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EtT-2n-lm4">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1342,7 +1342,7 @@ So that the application helps the tourist to identify the displayed areas, get a
         <!--EditPlace_View_Controller-->
         <scene sceneID="C2s-ch-1rn">
             <objects>
-                <viewController storyboardIdentifier="editID" id="bR3-QC-jLw" userLabel="EditPlace_View_Controller" customClass="EditPlaceVC" customModule="TourismSA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="go_to_editVC" id="bR3-QC-jLw" userLabel="EditPlace_View_Controller" customClass="EditPlaceVC" customModule="TourismSA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wf0-Vr-Y9s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1544,7 +1544,7 @@ So that the application helps the tourist to identify the displayed areas, get a
         <!--Item-->
         <scene sceneID="RIH-4o-Ulj">
             <objects>
-                <navigationController storyboardIdentifier="MainVC" automaticallyAdjustsScrollViewInsets="NO" id="gTz-Fk-rqN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="go_to_MainVC" automaticallyAdjustsScrollViewInsets="NO" id="gTz-Fk-rqN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="pSi-i1-pTo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="67j-g8-SrS">

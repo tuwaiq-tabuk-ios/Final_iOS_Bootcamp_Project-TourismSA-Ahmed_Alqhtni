@@ -21,7 +21,7 @@ class TourismTableViewCell: UITableViewCell {
   }
   
   
-  // - View Controller lifeCycle
+  //MARK: - View Controller lifeCycle
   
   override func setSelected(_ selected: Bool, animated: Bool) {
     super.setSelected(selected, animated: animated)

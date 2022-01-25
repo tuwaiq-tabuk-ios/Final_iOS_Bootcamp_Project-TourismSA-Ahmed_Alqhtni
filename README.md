@@ -13,8 +13,7 @@ People interested in tourism and exploring distinctive areas and monuments in th
 
 ## Video
 
-
-https://user-images.githubusercontent.com/91871668/150338032-4af94d32-a6d4-45fc-abe4-708b879f93d4.mov
+https://user-images.githubusercontent.com/91871668/150645730-7136e3b3-5f57-4591-8fc9-4added007044.mov
 
 
 

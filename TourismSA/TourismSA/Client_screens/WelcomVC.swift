@@ -25,13 +25,12 @@ class WelcomVC: UIViewController {
   
   @IBOutlet weak var sideMenuConstraint: NSLayoutConstraint!
   @IBOutlet weak var tourismTableView: UITableView!
-  @IBOutlet weak var profileButton:
-  UIButton!
+  @IBOutlet weak var profileButton: UIButton!
   
   
   
   
-  //MARK: - IBAction
+  //MARK: - IBActions
   
   @IBAction func signOut(_ sender: Any) {
     
@@ -93,7 +92,7 @@ class WelcomVC: UIViewController {
     
     collectionRF.getDocuments { snapshot, error in
       if error != nil {
-        print("~~ error get data: \(error?.localizedDescription)")
+        print("~~ error get data: \(String(describing: error?.localizedDescription))")
       } else {
         self.place.removeAll()
         for document in snapshot!.documents {
@@ -135,6 +134,9 @@ class WelcomVC: UIViewController {
 }
 
 
+//MARK: - UITableViewDataSource
+
+
 extension WelcomVC : UITableViewDataSource{
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return place.count
@@ -166,6 +168,9 @@ extension WelcomVC : UITableViewDataSource{
 }
 
 
+// MARK: - UITableViewDelegate
+
+
 extension WelcomVC: UITableViewDelegate{
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
@@ -180,6 +185,9 @@ extension WelcomVC: UITableViewDelegate{
   
 }
 
+
+
+//MARK: - ImageView
 
 extension UIImageView {
   func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {

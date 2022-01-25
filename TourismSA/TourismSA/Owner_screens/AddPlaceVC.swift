@@ -14,8 +14,8 @@ import FirebaseStorage
 class AddPlaceViewController: UIViewController,
                               UICollectionViewDelegate,
                               UICollectionViewDataSource
-
 {
+  
   
   
   // MARk: - property
@@ -23,6 +23,7 @@ class AddPlaceViewController: UIViewController,
   
   var imageForLogo:Bool!
   var imagesForPlace:[UIImage] = [UIImage]()
+  
   
   
   // MARk: - IBOutlet
@@ -40,6 +41,7 @@ class AddPlaceViewController: UIViewController,
   
   
   // MARk: - LifeCycle
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -86,7 +88,8 @@ class AddPlaceViewController: UIViewController,
   }
   
   
-  //MARK: - Action
+  
+  //MARK: - Actions
   
   
   @IBAction func deleteButtonTapped(_ sender: UIButton) {
@@ -195,7 +198,7 @@ class AddPlaceViewController: UIViewController,
   }
   
   
-  // MARk: - function
+  // MARK: - functions
   
   
   func presentPhotoPicker() {
@@ -217,7 +220,7 @@ class AddPlaceViewController: UIViewController,
 }
 
 
-//Mark:- PHPicker
+//MARK: - PHPicker
 
 extension AddPlaceViewController: PHPickerViewControllerDelegate{
   
