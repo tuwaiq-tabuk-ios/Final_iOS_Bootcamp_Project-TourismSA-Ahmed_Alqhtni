@@ -105,7 +105,7 @@ class signUpVC: UIViewController {
           ])
           
           let storyBord = UIStoryboard(name: "Main", bundle: nil)
-          let vc = storyBord.instantiateViewController(withIdentifier: Constants.K.mainStoryboard )
+          let vc = storyBord.instantiateViewController(withIdentifier: K.Storyboard.mainStoryboard )
           vc.modalPresentationStyle = .overFullScreen
           self.present(vc, animated: true)
           

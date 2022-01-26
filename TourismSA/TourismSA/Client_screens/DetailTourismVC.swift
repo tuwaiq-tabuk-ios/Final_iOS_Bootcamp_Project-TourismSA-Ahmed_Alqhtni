@@ -10,10 +10,7 @@ import MapKit
 import AVFAudio
 import AVFoundation
 
-class DetailTourismVC: UIViewController,
-                       UICollectionViewDelegate,
-                       UICollectionViewDataSource,
-                       UICollectionViewDelegateFlowLayout {
+class DetailTourismVC : UIViewController {
   
   
   // MARK: - propertys
@@ -125,36 +122,7 @@ class DetailTourismVC: UIViewController,
   }
   
   
-  func collectionView(_ collectionView: UICollectionView,
-                      numberOfItemsInSection section: Int) -> Int {
-    
-    return arrImage.count
-    
-  }
   
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      cellForItemAt indexPath: IndexPath) ->
-  UICollectionViewCell {
-    
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Place",
-                                                  for:indexPath) as! CollectionViewCell
-    
-    cell.imageCell.sd_setImage(with: URL(string: arrImage[indexPath.row]),
-                               placeholderImage: UIImage(named: "IMG_1287"))
-    return cell
-    
-  }
-  
- 
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      layout collectionViewLayout: UICollectionViewLayout,
-                      sizeForItemAt indexPath: IndexPath)
-  -> CGSize {
-    return CGSize(width: collectionView.frame.width ,
-                  height: collectionView.frame.height )
-  }
   
   
   func startTime() {
@@ -191,8 +159,44 @@ class DetailTourismVC: UIViewController,
 }
 
 
-// MARK: - Collection FlowLayout
 
+// MARK: - Collection
+
+extension  DetailTourismVC : UICollectionViewDelegate,
+           UICollectionViewDataSource,
+           UICollectionViewDelegateFlowLayout   {
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      numberOfItemsInSection section: Int) -> Int {
+    
+    return arrImage.count
+    
+  }
+  
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      cellForItemAt indexPath: IndexPath) ->
+  UICollectionViewCell {
+    
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Place",
+                                                  for:indexPath) as! CollectionViewCell
+    
+    cell.imageCell.sd_setImage(with: URL(string: arrImage[indexPath.row]),
+                               placeholderImage: UIImage(named: "IMG_1287"))
+    return cell
+    
+  }
+  
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      sizeForItemAt indexPath: IndexPath)
+  -> CGSize {
+    return CGSize(width: collectionView.frame.width ,
+                  height: collectionView.frame.height )
+  }
+
+}
 
 
 

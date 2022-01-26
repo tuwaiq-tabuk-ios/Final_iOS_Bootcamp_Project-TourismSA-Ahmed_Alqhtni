@@ -11,9 +11,8 @@ import Firebase
 import FirebaseStorage
 
 
-class AddPlaceViewController: UIViewController,
-                              UICollectionViewDelegate,
-                              UICollectionViewDataSource
+class AddPlaceViewController: UIViewController
+                              
 {
   
   
@@ -65,26 +64,6 @@ class AddPlaceViewController: UIViewController,
     logoImageView.image = UIImage()
     imagesCollectionView.reloadData()
     
-  }
-  
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      numberOfItemsInSection section: Int) -> Int {
-    return imagesForPlace.count
-    
-  }
-  
-  
-  func collectionView(_ collectionView: UICollectionView,
-                      cellForItemAt indexPath: IndexPath)
-  -> UICollectionViewCell {
-    
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell",
-                                                  for: indexPath) as! ImagesCollectionViewCell
-    cell.imagePlace.image = imagesForPlace[indexPath.row]
-    cell.deleteImage.tag = indexPath.row
-    
-    return cell
   }
   
   
@@ -198,6 +177,7 @@ class AddPlaceViewController: UIViewController,
   }
   
   
+  
   // MARK: - functions
   
   
@@ -214,13 +194,13 @@ class AddPlaceViewController: UIViewController,
     present(photoPicker, animated: true,
             completion: nil)
   }
-  
-  
-  
+
 }
 
 
+
 //MARK: - PHPicker
+
 
 extension AddPlaceViewController: PHPickerViewControllerDelegate{
   
@@ -232,9 +212,7 @@ extension AddPlaceViewController: PHPickerViewControllerDelegate{
       if let result = results.first, result.itemProvider.canLoadObject(ofClass: UIImage.self) {
         result.itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
           if let image = image as? UIImage {
-            // Store the image in the ImageStore for the item's key
             
-            // Put that image on the screen in the image view
             DispatchQueue.main.async {
               self.logoImageView.image = image
             }
@@ -254,5 +232,33 @@ extension AddPlaceViewController: PHPickerViewControllerDelegate{
         }
       }
     }
+  }
+}
+
+
+
+//MARK: - UICollectionView
+
+
+extension AddPlaceViewController :UICollectionViewDelegate,
+                                  UICollectionViewDataSource {
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      numberOfItemsInSection section: Int) -> Int {
+    return imagesForPlace.count
+    
+  }
+  
+  
+  func collectionView(_ collectionView: UICollectionView,
+                      cellForItemAt indexPath: IndexPath)
+  -> UICollectionViewCell {
+    
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imagesCell",
+                                                  for: indexPath) as! ImagesCollectionViewCell
+    cell.imagePlace.image = imagesForPlace[indexPath.row]
+    cell.deleteImage.tag = indexPath.row
+    
+    return cell
   }
 }

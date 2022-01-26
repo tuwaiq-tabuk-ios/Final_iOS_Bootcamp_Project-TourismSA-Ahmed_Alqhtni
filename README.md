@@ -19,6 +19,24 @@ https://user-images.githubusercontent.com/91871668/150645730-7136e3b3-5f57-4591-
 
 
 ## User stories
-   - Add an introductory text or a brief, pictures, and  about the place.
-   - Add a reader to the introductory text in the written place, for people who prefer to listen rather than read.
-   - Add a map to display the location and locate it.
+   - User should register .
+   - User can choose the place .
+   -  User can read and listen about the place and it’s historical stories .
+   -  User can have and see the location of the place .
+
+
+## Admin stories
+
+  - Admin should register .
+  - Admin can edit the places such as pictures and the location etc .
+  - Admin can add a new places and its information .
+  - Admin can delete any place .
+
+## Outstandig features
+
+ - Implemented forget password .
+ - The application support more than one language  . 
+ - Password confirmation .
+ - The application contains the dark mode and the light mode .
+ - The application contains a text reader .
+   

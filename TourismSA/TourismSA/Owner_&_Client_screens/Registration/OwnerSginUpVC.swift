@@ -34,6 +34,7 @@ class OwnerSginUpVC: UIViewController {
     lastNameTextField.layer.cornerRadius = 15
     emailTextField.layer.cornerRadius = 15
     passwordTextField.layer.cornerRadius = 15
+    PasswordVerification.layer.cornerRadius = 15
     hideKeyboardWhenTappedAround()
     
   }
@@ -103,7 +104,7 @@ class OwnerSginUpVC: UIViewController {
           ])
           
           let storyBord = UIStoryboard(name: "Main", bundle: nil)
-          let vc = storyBord.instantiateViewController(withIdentifier: Constants.K.OwnerStoryboard)
+          let vc = storyBord.instantiateViewController(withIdentifier: K.Storyboard.OwnerStoryboard)
           vc.modalPresentationStyle = .overFullScreen
           self.present(vc, animated: true)
           
